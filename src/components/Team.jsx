@@ -30,7 +30,7 @@ const Team = () => {
         {
             name: "Amine BelhajAmor",
             role: "Aeronautics Manager",
-            image: "public/comité/medamine.jpg",
+            image: "/comité/amine.jpg",
         },
         {
             name: "Maha Grami",
@@ -52,7 +52,7 @@ const Team = () => {
         {
             name:'Dorra Saadallah',
             role:'Treasurer',
-            image:'public/comité/dorraa.jpg',
+            image:'/comité/dorra.jpg',
         },
         {
             name: 'Omar Chouchane',
