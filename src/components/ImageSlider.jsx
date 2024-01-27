@@ -61,7 +61,7 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0 );
             <HStack width="100%" spacing={10}>
                 {displayedImages.map((img)=>{return(
                     <Image
-                    objectFit="cover"   
+                    objectFit="cover"
                     key={img}
                     src={img}
                     alt="Image"
