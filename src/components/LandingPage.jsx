@@ -6,7 +6,7 @@ const LandingPage = () => {
 
         <FullScreenSection  justifyContent="center" alignItems="center">
             <VStack spcaing={24}>
-                <Image src="src/assets/logo_aerobotix.png" alt="Aerobotix" width="500px" height="180px"/>
+                <Image src="/logo_aerobotix.png" alt="Aerobotix" width="500px" height="180px"/>
                 <Heading fontSize="5xl" color="#7D8491">Learn Create Innovate</Heading>
                 <Text id="landing-text" margin="2% 4% 3% 4%"
                       style={{fontFamily: 'cursive', whiteSpace: 'pre-wrap', color: "white"}} fontSize="xl">

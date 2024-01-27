@@ -6,58 +6,58 @@ const Team = () => {
         {
         name: "Mehdi Cherif",
         role: "Presidet",
-        image: "/src/assets/comité/mehdi2.jpg",
+        image: "/comité/mehdi2.jpg",
         },
         {
             name: "Rawaa Knaissi",
             role: "Administrative Vice President ",
-            image: "/src/assets/comité/rawaa.jpg",
+            image: "/comité/rawaa.jpg",
         }
         ,
         {
             name: "Mohamed Moussi",
             role: "Technical Vice President ",
-            image: "/src/assets/comité/hamma.jpg",
+            image: "/comité/hamma.jpg",
         },
         {
             name: "Oussama Darouez",
             role:"Projects Manager",
-            image:"/src/assets/comité/oussama.jpg",
+            image:"/comité/oussama.jpg",
         },
         {name:"Mostfa Ghalleb",
         role:"Training Manager",
-        image:"/src/assets/comité/mostfa.jpg",},
+        image:"/comité/mostfa.jpg",},
         {
             name: "Amine BelhajAmor",
             role: "Aeronautics Manager",
-            image: "/src/assets/comité/amine.jpg",
+            image: "/comité/amine.jpg",
         },
         {
             name: "Maha Grami",
             role: "Logistics Manager",
-            image: "/src/assets/comité/maha.jpg",
+            image: "/comité/maha.jpg",
         },
         {
             name: 'Nada Abidi' ,
             role: 'Human Resources Manager',
-            image: '/src/assets/comité/nadaRH.jpg',
+            image: '/comité/nadaRH.jpg',
         }
         ,
         {
             name:'Nada Hammami',
             role:'Sponsoring Manager',
-            image:'/src/assets/comité/nadaSP.jpg',
+            image:'/comité/nadaSP.jpg',
         }
         ,
         {
             name:'Dorra Saadallah',
             role:'Treasurer',
-            image:'/src/assets/comité/dorra.jpg',
+            image:'/comité/dorra.jpg',
         },
         {
             name: 'Omar Chouchane',
             role:'Media Manager',
-            image:'/src/assets/comité/omar.jpg',
+            image:'/comité/omar.jpg',
         }
     ]
     return (

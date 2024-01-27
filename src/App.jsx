@@ -1,7 +1,7 @@
 import {useEffect} from 'react'
 
 import './App.css'
-import {ChakraProvider, Image} from "@chakra-ui/react";
+import {ChakraProvider} from "@chakra-ui/react";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import VantaNet from "vanta/src/vanta.net.js";
