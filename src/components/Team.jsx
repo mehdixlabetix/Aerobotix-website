@@ -30,7 +30,7 @@ const Team = () => {
         {
             name: "Amine BelhajAmor",
             role: "Aeronautics Manager",
-            image: "public/comité/amine.jpg",
+            image: "public/comité/medamine.jpg",
         },
         {
             name: "Maha Grami",
@@ -52,7 +52,7 @@ const Team = () => {
         {
             name:'Dorra Saadallah',
             role:'Treasurer',
-            image:'public/comité/dorra.jpg',
+            image:'public/comité/dorraa.jpg',
         },
         {
             name: 'Omar Chouchane',
@@ -61,7 +61,7 @@ const Team = () => {
         }
     ]
     return (
-        <FullScreenSection justifyContent="center" alignItems="center">
+        <FullScreenSection   justifyContent="center" alignItems="center">
             <Heading color="wheat" as="h1" size="2xl" padding="3% 3% 10% 3%"> Our Team</Heading>
             <Card  minW="220px" marginBottom="40px"
                  id="team-card">

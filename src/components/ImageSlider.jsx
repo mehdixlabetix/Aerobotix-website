@@ -40,7 +40,6 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0 );
         aero16,
     ];
     const displayedImages = images.slice(currentImageIndex, currentImageIndex + 4);
-    console.log(displayedImages);
     const handleNextImage = () => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 4) % images.length);
 

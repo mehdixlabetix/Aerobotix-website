@@ -9,6 +9,7 @@ import LandingPage from "./components/LandingPage.jsx";
 import Axis from "./components/Axis.jsx";
 import ImageSlider from "./components/ImageSlider.jsx";
 import Team from "./components/Team.jsx";
+import Intro from "./components/Intro.jsx";
 
 function App() {
     useEffect(() => {
@@ -33,12 +34,14 @@ function App() {
     return (
         <ChakraProvider>
             <Header/>
+            <LandingPage/>
             <main id="main">
-                <LandingPage/>
+                <Intro/>
                 <Axis/>
                 <ImageSlider/>
                 <Team/>
             </main>
+
             <Footer/>
         </ChakraProvider>
     )
