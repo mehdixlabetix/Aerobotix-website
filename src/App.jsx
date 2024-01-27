@@ -24,7 +24,7 @@ function App() {
             scale: 1.00,
             scaleMobile: 1.00,
             color: "#ff0000",
-            backgroundColor: 0x1f1f27,
+            backgroundColor: "#111512",
             points: 7.00,
             maxDistance: 16.00,
             spacing: 18.00

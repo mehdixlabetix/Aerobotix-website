@@ -62,7 +62,7 @@ const Team = () => {
     ]
     return (
         <FullScreenSection   justifyContent="center" alignItems="center">
-            <Heading color="wheat" as="h1" size="2xl" padding="3% 3% 10% 3%"> Our Team</Heading>
+            <Heading color="white" as="h1" size="2xl" padding="3% 3% 10% 3%"> Our Team</Heading>
             <Card  minW="220px" marginBottom="40px"
                  id="team-card">
                 <Avatar objectFit="contain" marginBottom="40px" size="2xl" src={TeamMembers[0].image} alt={TeamMembers[0].name}/>

@@ -73,9 +73,10 @@ button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
 #axis_cards{
-     background-color:rgba(174, 167, 151,1);
+    background-color: transparent;
     border-radius: 20px;
     height: 510px;
+    color : white;
 }
 #axis_cards:hover
 {
@@ -84,11 +85,11 @@ button:focus-visible {
 }
 #team-card{
 
-    background-color:rgba(174, 167, 151,1);
+    background-color:rgba(174, 167, 151,0.75);
     height: 300px;
     justify-content:center;
     align-items:center;
-    border-radius: 0;
+    border-radius: 15px;
     padding: 5px;
 }
 #team-card:hover
