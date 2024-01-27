@@ -73,10 +73,9 @@ button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
 #axis_cards{
-     background-color:rgba(0,0,0,0.75);
+     background-color:rgba(174, 167, 151,1);
     border-radius: 20px;
     height: 510px;
-    color: white;
 }
 #axis_cards:hover
 {
