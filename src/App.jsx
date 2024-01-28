@@ -10,6 +10,7 @@ import Axis from "./components/Axis.jsx";
 import ImageSlider from "./components/ImageSlider.jsx";
 import Team from "./components/Team.jsx";
 import Intro from "./components/Intro.jsx";
+import Events from "./components/Events.jsx";
 
 function App() {
     useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
                 <Intro/>
                 <Axis/>
                 <ImageSlider/>
+                <Events/>
                 <Team/>
             </main>
 

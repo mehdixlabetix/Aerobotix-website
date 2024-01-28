@@ -9,7 +9,7 @@ const LandingPage = () => {
                 position: "absolute",
                 width: "100%",
                 left: "50%",
-                top: "10%",
+                top: "9%",
                 height: "100%",
                 objectFit: "contain",
                 transform: "translate(-50%, -50%)",

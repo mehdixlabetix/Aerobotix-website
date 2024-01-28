@@ -6,11 +6,11 @@ const Axis = () => {
     return (
 
         <FullScreenSection style={{backgroundColor:"#111512"}} width="100%" justifyContent="center" alignItems="center">
-            <Heading color="white" as="h1" size="4xl" padding="3% 3% 6% 3%"> Our Axis</Heading>
+            <Heading color="darkred" as="h1" size="4xl" padding="3% 3% 6% 3%"> Our Axis</Heading>
             <HStack spacing={58} align="center" >
                <Card marginLeft="10%"  id="axis_cards"  >
                    <VStack spacing="24px" align="center">
-                           <Image src="/robotics2.jpg" alt="robotics" width="70%" height="200px"  />
+                           <Image borderRadius="10px" src="/robotics2.jpg" alt="robotics" width="70%" height="200px"  />
                            <Heading  as="h1" size="xl" padding="2% 3% 0% 3%">Robotics</Heading>
                            <Text textAlign="center" padding="2% 3% 3% 3%"  fontSize="l" >Robotics is an interdisciplinary branch of engineering and
                                 science
@@ -25,7 +25,7 @@ const Axis = () => {
                    </VStack>
                </Card>
                 <Card marginRight="10%" id="axis_cards"  ><VStack spacing="24px" align="center">
-                    <Image src="/aeronautics.jpg" alt="robotics" width="70%" height="200px" />
+                    <Image borderRadius="10px" src="/aeronautics.jpg" alt="robotics" width="70%" height="200px" />
                     <Heading  as="h1" size="xl" padding="2% 3% 0% 3%">Aeronautics</Heading>
                     <Text textAlign="center" fontSize="l" justifyContent="center" padding="1% 3% 3% 3%">Aeronautics is the science or art involved with the study,
                         design, and
