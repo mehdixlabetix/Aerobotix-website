@@ -9,7 +9,7 @@ const Intro = () => {
             height:"100vh"
         }}   id="intro-section" justifyContent="center" alignItems="center">
            < VStack spcaing={10}>
-            <Heading marginTop="5%" fontSize={["xl","5xl"]} backgroundColor="white" color="var(--title)">A little introduction</Heading>
+            <Heading marginTop="5%" fontSize={["xl","5xl"]} backgroundColor="white">A little introduction</Heading>
             <Text id="landing-text" margin="7% 4% 3% 4%"
                   style={{fontFamily: 'cursive', whiteSpace: 'pre-wrap',backgroundColor:"white" }} fontSize={["md","xl"]}>
                 The AeRobotiX club is a non-profit science club.
@@ -25,7 +25,7 @@ const Intro = () => {
                 The club also offers its members the opportunity to participate in national and international
                 competitions, which allows them to acquire a lot of experience and skills.
             </Text>
-               <Image height="200px" src="/robot.jpg"/>
+               <Image  height="200px" src="/robot.jpg"/>
         </VStack>
         </FullScreenSection>
     )
