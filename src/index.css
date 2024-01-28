@@ -86,12 +86,13 @@ button:focus-visible {
 }
 #team-card{
 
-    background-color:rgba(174, 167, 151,0.75);
+    background-color:rgba(174, 167, 151,0);
     height: 300px;
     justify-content:center;
     align-items:center;
     border-radius: 15px;
     padding: 5px;
+    color: white;
 }
 #team-card:hover
 {
