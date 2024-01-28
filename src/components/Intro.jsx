@@ -1,14 +1,17 @@
 import FullScreenSection from "./FullScreenSection.jsx";
-import {Heading, Text, VStack} from "@chakra-ui/react";
+import {Heading, Text, VStack,Image} from "@chakra-ui/react";
 
 
 const Intro = () => {
     return (
-        <FullScreenSection marginTop="5%" height="100vh" id="intro-section" justifyContent="center" alignItems="center">
+        <FullScreenSection style={{
+            backgroundColor:"white",
+            height:"100vh"
+        }}   id="intro-section" justifyContent="center" alignItems="center">
            < VStack spcaing={10}>
-            <Heading fontSize={["xl","5xl"]} color="var(--title)">A little introduction</Heading>
+            <Heading marginTop="5%" fontSize={["xl","5xl"]} backgroundColor="white" color="var(--title)">A little introduction</Heading>
             <Text id="landing-text" margin="7% 4% 3% 4%"
-                  style={{fontFamily: 'cursive', whiteSpace: 'pre-wrap', color: "white"}} fontSize={["md","xl"]}>
+                  style={{fontFamily: 'cursive', whiteSpace: 'pre-wrap',backgroundColor:"white" }} fontSize={["md","xl"]}>
                 The AeRobotiX club is a non-profit science club.
                 It is the result of the merger of the Mechatronics and Embedded Orders clubs of INSAT.
                 AeRobotiX operates in the realization of robotic and automated applications having utility in vital
@@ -22,6 +25,7 @@ const Intro = () => {
                 The club also offers its members the opportunity to participate in national and international
                 competitions, which allows them to acquire a lot of experience and skills.
             </Text>
+               <Image height="200px" src="/robot.jpg"/>
         </VStack>
         </FullScreenSection>
     )

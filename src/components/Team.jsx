@@ -66,8 +66,8 @@ const Team = () => {
             <Card  minW={["150px","220px"]} marginBottom="40px"
                  id="team-card">
                 <Avatar objectFit="contain" marginBottom="40px" size="2xl" src={TeamMembers[0].image} alt={TeamMembers[0].name}/>
-                <Heading as="h1" fontSize="md" marginBottom="20px">{TeamMembers[0].name}</Heading>
-                <Heading as="h2" fontSize="sm ">{TeamMembers[0].role}</Heading>
+                <Heading as="h1"  fontSize="lg" marginBottom="20px">{TeamMembers[0].name}</Heading>
+                <Heading as="h3" fontSize="sm ">{TeamMembers[0].role}</Heading>
             </Card>
 
             <SimpleGrid width ={window.innerWidth-window.innerWidth/10} minChildWidth={['110px','220px']} spacing={["20px",'40px']} marginBottom="40px">
@@ -76,8 +76,8 @@ const Team = () => {
                             <Card  key={member.name}
                             id="team-card">
                                 <Avatar objectFit="contain" marginBottom="40px" size="2xl" src={member.image} alt={member.name}/>
-                                <Heading as="h1" fontSize="md" marginBottom="20px">{member.name}</Heading>
-                                <Heading as="h2" fontSize="sm ">{member.role}</Heading>
+                                <Heading as="h1" fontSize="lg" marginBottom="20px">{member.name}</Heading>
+                                <Heading as="h3" fontSize="sm ">{member.role}</Heading>
                             </Card>
                         )
                     })
