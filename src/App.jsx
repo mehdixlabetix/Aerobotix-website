@@ -11,6 +11,7 @@ import ImageSlider from "./components/ImageSlider.jsx";
 import Team from "./components/Team.jsx";
 import Intro from "./components/Intro.jsx";
 import Events from "./components/Events.jsx";
+import Eurobot from "./components/Eurobot.jsx";
 
 function App() {
     useEffect(() => {
@@ -40,6 +41,7 @@ function App() {
                 <Intro/>
                 <Axis/>
                 <ImageSlider/>
+                <Eurobot/>
                 <Events/>
                 <Team/>
             </main>

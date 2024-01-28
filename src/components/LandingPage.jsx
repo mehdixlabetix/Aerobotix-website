@@ -10,10 +10,10 @@ const LandingPage = () => {
                 position: "absolute",
                 width: "100%",
                 left: "50%",
-                top:"8%",
+                top:"6.5%",
                 height: "100%",
                 objectFit: "contain",
-                transform: "translate(-50%, -50%)",
+                transform: "translate(-50.05%, -50%)",
             }} autoPlay muted loop id="myVideo">
                 <source src="vid.mp4" type="video/mp4"/>
             </video>}
@@ -21,7 +21,7 @@ const LandingPage = () => {
                 position: "absolute",
                 width: "100%",
                 left: "50%",
-                top: "3%",
+                top: "2.5%",
                 height: "100%",
                 objectFit: "contain",
                 transform: "translate(-50%, -50%)",

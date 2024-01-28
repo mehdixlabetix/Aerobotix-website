@@ -3,12 +3,12 @@ import {Card, HStack, Image, Text, VStack, Heading, CardFooter, Button, Divider}
 
 const Events = () => {
     return (
-        <FullScreenSection id="events-section" justifyContent="center" alignItems="center">
+        <FullScreenSection paddingTop={"20%"} id="events-section" justifyContent="center" alignItems="center">
             <Heading color="var(--title)" as="h1" size="2xl" paddingBottom="5%" >Events</Heading>
             <VStack spacing={24}>
-                    <Card maxH={[800,250]} direction={{ base: 'column', xl: 'row' }}
+                    <Card maxH={[500,250]} direction={{ base: 'column', xl: 'row' }}
                       overflow='hidden'
-                      borderRadius="15px" maxW={["350px","1200px"]} backgroundColor="rgb(107, 146, 156)">
+                      borderRadius="15px" maxW={["300px","1200px"]} backgroundColor="rgb(107, 146, 156)">
                     <Image borderRadius="15px 0 0 15px" src="/robolympix2.jpg" alt="robolympix" height={["200px","300px"]}/>
 
                     <VStack style={{margin:"2% 1% 2% 1%"}}>
@@ -27,7 +27,7 @@ const Events = () => {
                     </CardFooter></Card>
                 <Card direction={{ base: 'column', xl: 'row' }}
                       overflow='hidden'
-                      borderRadius="15px" maxW={["350px","1200px"]} maxH={[800,250]} backgroundColor="rgb(107, 146, 156)">
+                      borderRadius="15px" maxW={["300px","1200px"]} maxH={[800,250]} backgroundColor="rgb(107, 146, 156)">
 
                       <Image src="/aeroday.jpg" alt="aeroday"  height={["200px","300px"]}/>
                     <VStack style={{margin:"2% 1% 2% 1%"}}>

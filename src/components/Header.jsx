@@ -39,7 +39,7 @@ const Header = () => {
         }
     }, [translation])
 
-
+    const windowWidth = window.outerWidth;
     return (
         <Box
             id="header"
@@ -73,10 +73,13 @@ const Header = () => {
                                         key={social.name}
                                         href={social.url}
                                     >
-                                        <FontAwesomeIcon
+                                        {windowWidth>760 &&   <FontAwesomeIcon
                                             icon={social.icon}
-                                            size= "2x"
-                                        />
+                                            size='2x'
+                                        />}
+                                        {windowWidth<=760 &&   <FontAwesomeIcon
+                                            icon={social.icon}
+                                            size='md'/>}
                                     </a>
                                 )
                             })}
@@ -86,6 +89,7 @@ const Header = () => {
                             <HStack spacing={[2,8]} fontSize={[10,20]}>
                             <a href="#intro-section">Introduction</a>
                             <a href="#axis-section">Axis</a>
+                            <a href="#eurobot-section">Eurobot</a>
                             <a href="#events-section">Events</a>
                             <a href="#team-section">Team</a>
                         </HStack>
