@@ -1,5 +1,5 @@
 import FullScreenSection from "./FullScreenSection.jsx";
-import {Card, HStack, Image, Text, VStack, Heading, CardFooter, Button} from "@chakra-ui/react";
+import {Card, HStack, Image, Text, VStack, Heading, CardFooter, Button, Divider} from "@chakra-ui/react";
 
 const Events = () => {
     return (
@@ -9,7 +9,7 @@ const Events = () => {
                 <Card maxH={250} direction={{ base: 'column', sm: 'row' }}
                       overflow='hidden'
                       borderRadius="15px" maxW="1200px" backgroundColor="rgba(255,255,255,0.7)"><HStack>
-                    <Image borderRadius="15px 0 0 15px" src="/robolympix.jpg" alt="robolympix" width="450px" height="300px"/>
+                    <Image borderRadius="15px 0 0 15px" src="/robolympix.jpg" alt="robolympix" height="300px"/>
 
                     <div style={{margin:"2% 2% 2% 2%"}}><Heading marginBottom="5%" as="h2" size="xl">Robolympix:</Heading>
                         <Text fontSize={14}>
@@ -19,15 +19,18 @@ const Events = () => {
                             Junior, making it a thrilling platform
                             for anyone to explore the exciting world of robotics.</Text>
                     </div>
+                    <Divider  orientation="vertical" />
+
                 </HStack>
                     <CardFooter style={{justifyContent: "center", alignItems: "center"}}>
+
                         <a href="https://robolympix.tn"><Button colorScheme="red" variant="solid">View More</Button></a>
                     </CardFooter></Card>
                 <Card direction={{base: 'column', sm: 'row'}}
                       overflow='hidden'
                       borderRadius="15px" maxW="1200px" maxH="250px" backgroundColor="rgba(255,255,255,0.7)">
                   <HStack>
-                      <Image src="/aeroday.jpg" alt="aeroday" width="70%" height="300px" />
+                      <Image src="/aeroday.jpg" alt="aeroday"  height="300px" />
                     <div>
 
                         <Heading marginBottom="1%" as="h2" size="xl" >Aeroday:</Heading>
@@ -39,8 +42,9 @@ const Events = () => {
                             Aerochallenge and AeroEntrepreneur competitions. Whether you're a seasoned pilot, a budding aerospace engineer,
                             or simply an aviation enthusiast, Aeroday promises an unforgettable journey into the boundless realm of flight!</Text>
                     </div>
+                      <Divider  orientation="vertical" />
 
-                </HStack>
+                  </HStack>
                 <CardFooter style={{justifyContent:"center",alignItems:"center"}}>
                     <a href="https://aeroday.tn"><Button colorScheme="red" variant="solid">View More</Button></a>
                 </CardFooter></Card>
