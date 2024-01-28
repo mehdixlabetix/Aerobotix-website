@@ -13,9 +13,9 @@ const Intro = () => {
             <Text id="landing-text" margin="7% 4% 3% 4%"
                   style={{fontFamily: 'cursive', whiteSpace: 'pre-wrap',backgroundColor:"white" }} fontSize={["md","xl"]}>
                 The AeRobotiX club is a non-profit science club.
-                It is the result of the merger of the Mechatronics and Embedded Orders clubs of INSAT.
+                It is the result of the merger of the Mechatronics and CCE of INSAT.
                 AeRobotiX operates in the realization of robotic and automated applications having utility in vital
-                areas such as industry, home automation, aeronautics, automotive and security.
+                areas such as robotics , home automation, aeronautics, automotive and security.
                 In addition, AeRobotiX has a glorious history of its regular participation in national and
                 international competitions, particularly in the field of robotics.
                 AeRobotiX offers its members excellent technical training, accompanied by exceptional managerial

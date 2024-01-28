@@ -8,9 +8,8 @@ const Events = () => {
             <VStack spacing={24}>
                     <Card maxH={[500,250]} direction={{ base: 'column', xl: 'row' }}
                       overflow='hidden'
-                      borderRadius="15px" maxW={["300px","1200px"]} backgroundColor="rgb(107, 146, 156)">
+                      borderRadius="15px" maxW={["300px","1200px"]} backgroundColor="#447FD8    ">
                     <Image borderRadius="15px 0 0 15px" src="/robolympix2.jpg" alt="robolympix" height={["200px","300px"]}/>
-
                     <VStack style={{margin:"2% 1% 2% 1%"}}>
                         <Heading marginBottom="5%" as="h2" size="xl">Robolympix</Heading>
                         <Text fontSize={14}>
@@ -23,11 +22,11 @@ const Events = () => {
                     </VStack>
 
                     <CardFooter style={{justifyContent: "center", alignItems: "center"}}>
-                        <a href="https://robolympix.tn"><Button colorScheme="whiteAlpha" variant="solid">View More</Button></a>
+                        <a href="https://robolympix.tn"><Button colorScheme="blackAlpha" variant="solid">View More</Button></a>
                     </CardFooter></Card>
                 <Card direction={{ base: 'column', xl: 'row' }}
                       overflow='hidden'
-                      borderRadius="15px" maxW={["300px","1200px"]} maxH={[800,250]} backgroundColor="rgb(107, 146, 156)">
+                      borderRadius="15px" maxW={["300px","1200px"]} maxH={[800,250]} backgroundColor="#447FD8">
 
                       <Image src="/aeroday.jpg" alt="aeroday"  height={["200px","300px"]}/>
                     <VStack style={{margin:"2% 1% 2% 1%"}}>
@@ -43,7 +42,7 @@ const Events = () => {
                         </VStack>
 
                 <CardFooter style={{justifyContent:"center",alignItems:"center"}}>
-                    <a href="https://aeroday.tn"><Button colorScheme="whiteAlpha" variant="solid">View More</Button></a>
+                    <a href="https://aeroday.tn"><Button colorScheme="blackAlpha" variant="solid">View More</Button></a>
                 </CardFooter></Card>
             </VStack>
         </FullScreenSection>
