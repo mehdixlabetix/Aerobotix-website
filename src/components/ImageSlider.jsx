@@ -55,7 +55,7 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0 );
 
     return (
         <FullScreenSection id="image-section" width={window.innerWidth-window.innerWidth/10} height="100vh" justifyContent="center" alignItems="center">
-            <Heading color="var(--title)" as="h1" size="2xl" padding="0% 3% 10% 3%"> Precious Memories</Heading>
+            <Heading color="var(--title)" as="h1" size={["xl","2xl"]} padding="0% 2% 10% 2%"> Precious Memories</Heading>
             <HStack width="100%"   spacing={[4,10]}>
                 {displayedImages.map((img)=>{return(
                     <Image
