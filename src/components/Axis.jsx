@@ -5,7 +5,7 @@ const Axis = () => {
 
     return (
 
-        <FullScreenSection style={{backgroundColor:"#111512"}} width="100%" justifyContent="center" alignItems="center">
+        <FullScreenSection id="axis-section" style={{backgroundColor:"#111512"}} width="100%" justifyContent="center" alignItems="center">
             <Heading color="darkred" as="h1" size="4xl" padding="3% 3% 6% 3%"> Our Axis</Heading>
             <HStack spacing={58} align="center" >
                <Card marginLeft="10%"  id="axis_cards"  >

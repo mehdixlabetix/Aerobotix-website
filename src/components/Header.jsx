@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react'
+import  {useEffect, useRef} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import {faFacebook, faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
@@ -38,16 +38,7 @@ const Header = () => {
             window.removeEventListener('scroll', handleScroll)
         }
     }, [translation])
-    const handleClick = (anchor) => () => {
-        const id = `${anchor}-section`
-        const element = document.getElementById(id)
-        if (element) {
-            element.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-            })
-        }
-    }
+
 
     return (
         <Box
@@ -93,8 +84,10 @@ const Header = () => {
                     </nav>
                     <nav id="header-links">
                         <HStack spacing={8}>
-                            <a href="#contact-me-section">Contact us</a>
-                            <a href="#projects-section">Projects</a>
+                            <a href="#intro-section">Introduction</a>
+                            <a href="#axis-section">Axis</a>
+                            <a href="#events-section">Events</a>
+                            <a href="#team-section">Team</a>
                         </HStack>
                     </nav>
                 </HStack>

@@ -3,7 +3,7 @@ import {Card, HStack, Image, Text, VStack, Heading, CardFooter, Button, Divider}
 
 const Events = () => {
     return (
-        <FullScreenSection justifyContent="center" alignItems="center">
+        <FullScreenSection id="events-section" justifyContent="center" alignItems="center">
             <Heading color="darkred" as="h1" size="2xl" paddingBottom="5%" >Events</Heading>
             <VStack spacing={24}>
                 <Card maxH={250} direction={{ base: 'column', sm: 'row' }}

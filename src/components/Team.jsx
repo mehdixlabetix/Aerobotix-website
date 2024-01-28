@@ -61,7 +61,7 @@ const Team = () => {
         }
     ]
     return (
-        <FullScreenSection   justifyContent="center" alignItems="center">
+        <FullScreenSection id="team-section"  justifyContent="center" alignItems="center">
             <Heading color="darkred" as="h1" size="2xl" padding="5% 3% 4% 3%"> Our Team</Heading>
             <Card  minW="220px" marginBottom="40px"
                  id="team-card">
