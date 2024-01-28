@@ -6,10 +6,10 @@ const Events = () => {
         <FullScreenSection id="events-section" justifyContent="center" alignItems="center">
             <Heading color="var(--title)" as="h1" size="2xl" paddingBottom="5%" >Events</Heading>
             <VStack spacing={24}>
-                <Card maxH={250} direction={{ base: 'column', sm: 'row' }}
+                    <Card maxH={[800,250]} direction={{ base: 'column', xl: 'row' }}
                       overflow='hidden'
-                      borderRadius="15px" maxW="1200px" backgroundColor="#57737A"><HStack>
-                    <Image borderRadius="15px 0 0 15px" src="/robolympix2.jpg" alt="robolympix" height="300px"/>
+                      borderRadius="15px" maxW={["350px","1200px"]} backgroundColor="#57737A">
+                    <Image borderRadius="15px 0 0 15px" src="/robolympix2.jpg" alt="robolympix" height={["200px","300px"]}/>
 
                     <VStack style={{margin:"2% 1% 2% 1%"}}>
                         <Heading marginBottom="5%" as="h2" size="xl">Robolympix</Heading>
@@ -19,19 +19,17 @@ const Events = () => {
                             like autonomous robots and remote controlled robots. Even kids can join through Robolympix
                             Junior, making it a thrilling platform
                             for anyone to explore the exciting world of robotics.</Text>
+
                     </VStack>
-                    <Divider  orientation="vertical" />
 
-                </HStack>
                     <CardFooter style={{justifyContent: "center", alignItems: "center"}}>
-
                         <a href="https://robolympix.tn"><Button colorScheme="whiteAlpha" variant="solid">View More</Button></a>
                     </CardFooter></Card>
-                <Card direction={{base: 'column', sm: 'row'}}
+                <Card direction={{ base: 'column', xl: 'row' }}
                       overflow='hidden'
-                      borderRadius="15px" maxW="1200px" maxH="250px" backgroundColor="#57737A">
-                  <HStack>
-                      <Image src="/aeroday.jpg" alt="aeroday"  height="300px" />
+                      borderRadius="15px" maxW={["350px","1200px"]} maxH={[800,250]} backgroundColor="#57737A">
+
+                      <Image src="/aeroday.jpg" alt="aeroday"  height={["200px","300px"]}/>
                     <VStack style={{margin:"2% 1% 2% 1%"}}>
 
                         <Heading marginBottom="2%" as="h2" size="xl" >Aeroday</Heading>
@@ -43,9 +41,7 @@ const Events = () => {
                             Aerochallenge and AeroEntrepreneur competitions.
                         </Text>
                         </VStack>
-                      <Divider  orientation="vertical" />
 
-                  </HStack>
                 <CardFooter style={{justifyContent:"center",alignItems:"center"}}>
                     <a href="https://aeroday.tn"><Button colorScheme="whiteAlpha" variant="solid">View More</Button></a>
                 </CardFooter></Card>

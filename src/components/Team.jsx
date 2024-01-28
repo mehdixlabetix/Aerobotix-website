@@ -63,14 +63,14 @@ const Team = () => {
     return (
         <FullScreenSection id="team-section"  justifyContent="center" alignItems="center">
             <Heading color="var(--title)" as="h1" size="2xl" padding="5% 3% 4% 3%"> Our Team</Heading>
-            <Card  minW="220px" marginBottom="40px"
+            <Card  minW={["150px","220px"]} marginBottom="40px"
                  id="team-card">
                 <Avatar objectFit="contain" marginBottom="40px" size="2xl" src={TeamMembers[0].image} alt={TeamMembers[0].name}/>
                 <Heading as="h1" fontSize="md" marginBottom="20px">{TeamMembers[0].name}</Heading>
                 <Heading as="h2" fontSize="sm ">{TeamMembers[0].role}</Heading>
             </Card>
 
-            <SimpleGrid width="1300px" minChildWidth='220px' spacing='40px' marginBottom="40px">
+            <SimpleGrid width ={window.innerWidth-window.innerWidth/10} minChildWidth={['110px','220px']} spacing={["20px",'40px']} marginBottom="40px">
                 {  TeamMembers.slice(1,TeamMembers.length).map((member)=>{
                         return (
                             <Card  key={member.name}

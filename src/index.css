@@ -111,4 +111,35 @@ button:focus-visible {
     button {
         background-color: #f9f9f9;
     }
+
+}
+#memories{
+    border-radius: 10px;
+    height: 200px;
+    width: 300px;
+}
+@media(max-width: 768px){
+    #landing-section {
+        height: 250px;
+    }
+    #image-section
+    {
+        height: 500px;
+
+    }
+    #memories{
+        height: 50px;
+
+        max-width: 80px;
+    }
+    #axis_cards{
+        height: 200px;
+
+
+    }
+    #axis-section{
+        height: 500px;
+        font-size: 10px;
+        margin-bottom: 50px;
+    }
 }

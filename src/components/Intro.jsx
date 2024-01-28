@@ -4,11 +4,11 @@ import {Heading, Text, VStack} from "@chakra-ui/react";
 
 const Intro = () => {
     return (
-        <FullScreenSection id="intro-section" justifyContent="center" alignItems="center">
+        <FullScreenSection marginTop="5%" height="100vh" id="intro-section" justifyContent="center" alignItems="center">
            < VStack spcaing={10}>
-            <Heading fontSize="5xl" color="var(--title)">A little introduction</Heading>
+            <Heading fontSize={["xl","5xl"]} color="var(--title)">A little introduction</Heading>
             <Text id="landing-text" margin="7% 4% 3% 4%"
-                  style={{fontFamily: 'cursive', whiteSpace: 'pre-wrap', color: "white"}} fontSize="xl">
+                  style={{fontFamily: 'cursive', whiteSpace: 'pre-wrap', color: "white"}} fontSize={["md","xl"]}>
                 The AeRobotiX club is a non-profit science club.
                 It is the result of the merger of the Mechatronics and Embedded Orders clubs of INSAT.
                 AeRobotiX operates in the realization of robotic and automated applications having utility in vital

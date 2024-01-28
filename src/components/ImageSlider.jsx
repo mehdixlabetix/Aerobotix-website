@@ -54,16 +54,17 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0 );
     }, );
 
     return (
-        <FullScreenSection justifyContent="center" alignItems="center">
-            <Heading color="var(--title)" as="h1" size="2xl" padding="3% 3% 10% 3%"> Precious Memories</Heading>
-            <HStack width="100%" spacing={10}>
+        <FullScreenSection id="image-section" width={window.innerWidth-window.innerWidth/10} height="100vh" justifyContent="center" alignItems="center">
+            <Heading color="var(--title)" as="h1" size="2xl" padding="0% 3% 10% 3%"> Precious Memories</Heading>
+            <HStack width="100%"   spacing={[4,10]}>
                 {displayedImages.map((img)=>{return(
                     <Image
+                        id="memories"
                     objectFit="fill"
                     key={img}
                     src={img}
                     alt="Image"
-                    style={{ borderRadius: "10px", height: "200px" ,minWidth:"300px"}}
+
                 />)})}
                 </HStack>
         </FullScreenSection>

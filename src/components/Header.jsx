@@ -55,15 +55,15 @@ const Header = () => {
             ref={translation}
             zIndex={5}
         >
-            <Box color="white" maxWidth="1280px" margin="0 auto">
+            <Box color="white" maxWidth={["400px", "1280px"]} margin={["0 0","0 auto"]}>
                 <HStack
-                    px={16}
+                    px={[4,16]}
                     py={4}
                     justifyContent="space-between"
                     alignItems="center"
                 >
                     <nav id="header-socials">
-                        <HStack spacing={8}>
+                        <HStack spacing={[2,8]}>
                             {socials.map((social) => {
                                 return (
                                     <a
@@ -75,7 +75,7 @@ const Header = () => {
                                     >
                                         <FontAwesomeIcon
                                             icon={social.icon}
-                                            size="2x"
+                                            size= "2x"
                                         />
                                     </a>
                                 )
@@ -83,7 +83,7 @@ const Header = () => {
                         </HStack>
                     </nav>
                     <nav id="header-links">
-                        <HStack spacing={8}>
+                            <HStack spacing={[2,8]} fontSize={[10,20]}>
                             <a href="#intro-section">Introduction</a>
                             <a href="#axis-section">Axis</a>
                             <a href="#events-section">Events</a>
