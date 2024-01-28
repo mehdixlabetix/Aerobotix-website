@@ -6,7 +6,7 @@ const Intro = () => {
     return (
         <FullScreenSection id="intro-section" justifyContent="center" alignItems="center">
            < VStack spcaing={10}>
-            <Heading fontSize="5xl" color="darkred">A little introduction</Heading>
+            <Heading fontSize="5xl" color="var(--title)">A little introduction</Heading>
             <Text id="landing-text" margin="7% 4% 3% 4%"
                   style={{fontFamily: 'cursive', whiteSpace: 'pre-wrap', color: "white"}} fontSize="xl">
                 The AeRobotiX club is a non-profit science club.
