@@ -6,7 +6,10 @@ const LandingPage = () => {
     return (
 
         <FullScreenSection id="landing-section" justifyContent="center" alignItems="center">
-            {width>760 &&    <video style={{
+            {width>760 &&
+                <video
+                rel={"preload"}
+                style={{
                 position: "absolute",
                 width: "100%",
                 left: "50%",
