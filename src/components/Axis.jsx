@@ -5,12 +5,12 @@ const Axis = () => {
 
     return (
 
-        <FullScreenSection id="axis-section" style={{backgroundColor:"#111512"}} width="100%" justifyContent="center" alignItems="center">
+        <FullScreenSection id="axis-section" width="100%" justifyContent="center" alignItems="center">
             <Heading color="var(--title)" as="h1" size="4xl" padding="3% 3% 6% 3%"> Our Axis</Heading>
             <HStack spacing={[8,58]} align="center" >
-               <Card  marginLeft={["8%","10%"]}  id="axis_cards"  >
+               <Card variant={'unstyled'} marginLeft={["8%","10%"]}  id="axis_cards"  >
                    <VStack spacing="24px" align="center">
-                           <Image borderRadius="10px" src="/robotics2.jpg" alt="robotics" width="70%" height={["100px","200px"]}  />
+                           <Image marginTop="3%" borderRadius="10px" src="/robotics2.jpg" alt="robotics" width="70%" height={["100px","200px"]}  />
                            <Heading  as="h1" size="xl" padding="2% 3% 0% 3%">Robotics</Heading>
                            <Text textAlign={["left","center"]} padding="2% 3% 3% 3%"   fontSize={["s","l"]} >Robotics is an interdisciplinary branch of engineering and
                                 science
@@ -24,8 +24,8 @@ const Axis = () => {
                             </Text>
                    </VStack>
                </Card>
-                <Card marginRight={["8%","10%"]} id="axis_cards"  ><VStack spacing="24px" align="center">
-                    <Image filter="brightness(1.8)" borderRadius="10px" src="/aeronautics.jpg" alt="robotics" width="70%" height={["100px","200px"]} />
+                <Card variant={'unstyled'} marginRight={["8%","10%"]} id="axis_cards"  ><VStack spacing="24px" align="center">
+                    <Image marginTop="3%" filter="brightness(1.8)" borderRadius="10px" src="/aeronautics.jpg" alt="robotics" width="70%" height={["100px","200px"]} />
                     <Heading  as="h1" size="xl" padding="2% 3% 0% 3%">Aeronautics</Heading>
                     <Text textAlign={["left","center"]} fontSize={["m","l"]} justifyContent="center" padding="1% 3% 3% 3%">Aeronautics is the science or art involved with the study,
                         design, and

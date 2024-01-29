@@ -8,7 +8,7 @@ const Events = () => {
             <VStack spacing={24}>
                     <Card maxH={[500,250]} direction={{ base: 'column', xl: 'row' }}
                       overflow='hidden'
-                      borderRadius="15px" maxW={["300px","1200px"]} backgroundColor="#447FD8    ">
+                      borderRadius="15px" maxW={["300px","1200px"]} backgroundColor="rgb(107, 146, 156)">
                     <Image borderRadius="15px 0 0 15px" src="/robolympix2.jpg" alt="robolympix" height={["200px","300px"]}/>
                     <VStack style={{margin:"2% 1% 2% 1%"}}>
                         <Heading marginBottom="5%" as="h2" size="xl">Robolympix</Heading>
@@ -26,7 +26,7 @@ const Events = () => {
                     </CardFooter></Card>
                 <Card direction={{ base: 'column', xl: 'row' }}
                       overflow='hidden'
-                      borderRadius="15px" maxW={["300px","1200px"]} maxH={[800,250]} backgroundColor="#447FD8">
+                      borderRadius="15px" maxW={["300px","1200px"]} maxH={[800,250]} backgroundColor="rgb(107, 146, 156)">
 
                       <Image src="/aeroday.jpg" alt="aeroday"  height={["200px","300px"]}/>
                     <VStack style={{margin:"2% 1% 2% 1%"}}>
