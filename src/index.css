@@ -130,9 +130,9 @@ button:focus-visible {
 
     }
     #memories{
-        height: 50px;
+        height: 200px;
 
-        max-width: 70px;
+        max-width: 300px;
     }
     #axis_cards{
         height: 200px;

@@ -21,6 +21,8 @@ import FullScreenSection from "./FullScreenSection.jsx";
 
 const ImageSlider = () => {
 const [currentImageIndex, setCurrentImageIndex] = useState(0 );
+const [currentImageIndex2, setCurrentImageIndex2] = useState(0 );
+
     const images = [
         aero1,
         aero2,
@@ -42,8 +44,9 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0 );
     const displayedImages = images.slice(currentImageIndex, currentImageIndex + 4);
     const handleNextImage = () => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 4) % images.length);
-
+        setCurrentImageIndex2((prevIndex) => (prevIndex + 1) % images.length);
     };
+    const windowWidth = window.innerWidth;
 
     useEffect(() => {
         // Add an interval for automatic image sliding
@@ -53,22 +56,38 @@ const [currentImageIndex, setCurrentImageIndex] = useState(0 );
         return () => clearInterval(intervalId);
     }, );
 
-    return (
-        <FullScreenSection id="image-section" width={window.innerWidth-window.innerWidth/10} height="100vh" justifyContent="center" alignItems="center">
-            <Heading color="var(--title)" as="h1" size={["xl","2xl"]} padding="0% 2% 10% 2%"> Precious Memories</Heading>
-            <HStack width="100%"   spacing={[4,10]}>
-                {displayedImages.map((img)=>{return(
-                    <Image
-                        id="memories"
-                    objectFit="fill"
-                    key={img}
-                    src={img}
-                    alt="Image"
+  if (windowWidth>750){  return (
+      <FullScreenSection id="image-section" width={window.innerWidth-window.innerWidth/10} height="100vh" justifyContent="center" alignItems="center">
+          <Heading color="var(--title)" as="h1" size={["xl","2xl"]} padding="0% 2% 10% 2%"> Precious Memories</Heading>
+          <HStack width="100%"   spacing={[4,10]}>
+              {displayedImages.map((img)=>{return(
+                  <Image
+                      id="memories"
+                      objectFit="fill"
+                      key={img}
+                      src={img}
+                      alt="Image"
 
-                />)})}
-                </HStack>
-        </FullScreenSection>
-    );
+                  />)})}
+          </HStack>
+      </FullScreenSection>
+  );}
+  else {
+      return (
+          <FullScreenSection id="image-section" width={window.innerWidth-window.innerWidth/10} height="100vh" justifyContent="center" alignItems="center">
+              <Heading color="var(--title)" as="h1" size={["xl","2xl"]} padding="0% 2% 10% 2%"> Precious Memories</Heading>
+
+                      <Image
+                          id="memories"
+                          objectFit="fill"
+                          key={images[currentImageIndex2]}
+                          src={images[currentImageIndex2]}
+                          alt="Image"
+
+                      />
+          </FullScreenSection>
+      );
+  }
 };
 
 export default ImageSlider;
