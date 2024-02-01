@@ -77,12 +77,13 @@ button:focus-visible {
     background-color: transparent;
     border-radius: 20px;
     height: 510px;
+    transition: ease all 0.8s;
 
 }
 #axis_cards:hover
 {
   scale: 1.2;
-    transition: ease all 0.8s;
+
 }
 #team-card{
 
