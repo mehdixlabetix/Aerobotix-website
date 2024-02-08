@@ -34,6 +34,7 @@ function App() {
 
     }, [])
     return (
+        <>
         <ChakraProvider>
             <Header/>
             <LandingPage/>
@@ -47,8 +48,9 @@ function App() {
             </main>
 
             <Footer/>
-            <Analytics id="ANALYTICS_ID" />
         </ChakraProvider>
+            <Analytics />
+        </>
     )
 }
 
