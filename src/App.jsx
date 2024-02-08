@@ -1,5 +1,5 @@
 import {useEffect} from 'react'
-
+import { Analytics } from '@vercel/analytics/react';
 import './App.css'
 import {ChakraProvider} from "@chakra-ui/react";
 import Header from "./components/Header.jsx";
@@ -47,6 +47,7 @@ function App() {
             </main>
 
             <Footer/>
+            <Analytics id="ANALYTICS_ID" />
         </ChakraProvider>
     )
 }
