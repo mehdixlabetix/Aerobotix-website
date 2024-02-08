@@ -144,4 +144,11 @@ button:focus-visible {
         font-size: 10px;
         margin-bottom: 50px;
     }
+    #team-card{
+
+        height: 150px;
+        border-radius: 15px;
+        margin-top: 50px;
+
+    }
 }

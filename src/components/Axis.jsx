@@ -7,12 +7,13 @@ const Axis = () => {
 
         <FullScreenSection id="axis-section" width="100%" justifyContent="center" alignItems="center">
             <Heading color="var(--title)" as="h1" size="4xl" padding="3% 3% 6% 3%"> Our Axis</Heading>
-            <HStack spacing={[8,58]} align="center" >
+            <HStack spacing={[6,58]} align="center" >
                <Card variant={'unstyled'} marginLeft={["8%","10%"]}  id="axis_cards"  >
                    <VStack spacing="24px" align="center">
                            <Image marginTop="3%" borderRadius="10px" src="/robotics2.jpg" alt="robotics" width={["100%","70%"]} height={["100px","200px"]}  />
-                           <Heading  as="h1" size="xl" padding="2% 3% 0% 3%">Robotics</Heading>
-                           <Text textAlign={["left","center"]} padding="2% 3% 3% 3%"   fontSize={["s","l"]} >Robotics is an interdisciplinary branch of engineering and
+                           <Heading as="h1" size="xl" padding="2% 3% 0% 3%">Robotics</Heading>
+                           <Text   textAlign={["left","center"]} padding="2% 3% 3% 3%"   fontSize={["s","l"]} >
+                               Robotics is an interdisciplinary branch of engineering and
                                 science
                                 that
                                 includes mechanical engineering, electronic engineering, information engineering, computer
