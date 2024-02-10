@@ -74,7 +74,7 @@ const Team = () => {
                 <Heading as="h3" fontSize="sm " fontStyle="italic">{TeamMembers[0].role}</Heading>
             </Card>
 
-            <SimpleGrid width={window.innerWidth - window.innerWidth / 10} minChildWidth={['110px', '220px']}
+            <SimpleGrid width={window.innerWidth - window.innerWidth / 10} minChildWidth={['110px', window.innerWidth / 7]}
                         spacing={["30px", '40px']} marginBottom="40px">
                 {TeamMembers.slice(1, TeamMembers.length).map((member) => {
                     return (

@@ -6,7 +6,7 @@ const Axis = () => {
     return (
 
         <FullScreenSection id="axis-section" width="100%" justifyContent="center" alignItems="center">
-            <Heading color="var(--title)" as="h1" size="4xl" padding="7% 3% 6% 3%"> Our Axis</Heading>
+            <Heading color="var(--title)" as="h1" size={["xl","4xl"]} padding="7% 3% 6% 3%"> Our Axis</Heading>
             <HStack spacing={[6, 58]} align="center">
                 <Card zIndex={1} variant={'unstyled'} marginLeft={["8%", "10%"]} id="axis_cards">
                     <VStack spacing="24px" align="center">

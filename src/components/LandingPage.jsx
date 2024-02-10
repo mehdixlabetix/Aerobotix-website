@@ -8,6 +8,7 @@ const LandingPage = () => {
         <FullScreenSection zIndex={1} id="landing-section" justifyContent="center" alignItems="center">
             {width > 760 &&
                 <video
+                    preload={"auto"}
                     rel={"preload"}
                     style={{
                         position: "absolute",
@@ -20,7 +21,9 @@ const LandingPage = () => {
                     }} autoPlay muted loop id="myVideo">
                     <source src="vid.mp4" type="video/mp4"/>
                 </video>}
-            {width < 760 && <video style={{
+            {width < 760 && <video
+                preload={"auto"}
+                style={{
                 position: "absolute",
                 width: "100%",
                 left: "50%",

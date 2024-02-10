@@ -121,11 +121,7 @@ button:focus-visible {
 
 }
 
-#memories {
-    border-radius: 10px;
-    height: 200px;
-    width: 300px;
-}
+
 
 @media (max-width: 768px) {
     #landing-section {
@@ -139,7 +135,7 @@ button:focus-visible {
 
     #memories {
         height: 200px;
-
+        border-radius: 10px;
         max-width: 300px;
     }
 

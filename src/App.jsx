@@ -5,9 +5,7 @@ import {ChakraProvider} from "@chakra-ui/react";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import LandingPage from "./components/LandingPage.jsx";
-import Axis from "./components/Axis.jsx";
 import Intro from "./components/Intro.jsx";
-
 import Particles from "./components/particles.jsx";
 
 function App() {
@@ -15,15 +13,15 @@ function App() {
     const LazyTeam = lazy(() => import('./components/Team.jsx'))
     const LazyEvents = lazy(() => import('./components/Events.jsx'))
     const LazyImageSlider = lazy(() => import('./components/ImageSlider.jsx'))
+    const LazyAxis = lazy(() => import('./components/Axis.jsx'))
     return (
         <>
             <ChakraProvider>
                 <Header/>
                 <LandingPage/>
-
                 <Intro/>
-                <Axis/>
                 <Suspense fallback={<div>Loading...</div>}>
+                    <LazyAxis/>
                     <LazyImageSlider/>
                 </Suspense>
                 <Suspense fallback={<div>Loading...</div>}>
@@ -34,8 +32,6 @@ function App() {
                     <LazyTeam/>
                 </Suspense>
                 <Particles/>
-
-
                 <Footer/>
             </ChakraProvider>
             <Analytics/>

@@ -62,12 +62,16 @@ const ImageSlider = () => {
                                justifyContent="center" alignItems="center">
                 <Heading color="var(--title)" as="h1" size={["xl", "2xl"]} padding="0% 2% 10% 2%"> Precious
                     Memories</Heading>
-                <HStack width="100%" spacing={[4, 10]}>
+                <HStack width="100%" spacing={[4, 10]}  justifyContent="center" alignItems="center">
                     {displayedImages.map((img) => {
                         return (
                             <Image
                                 zIndex={1}
-                                id="memories"
+                                style={{
+                                    borderRadius: '10px',
+                                    height: '200px',
+                                    width: windowWidth / 4 - windowWidth / 20,
+                                }}
                                 objectFit="fill"
                                 key={img}
                                 src={img}

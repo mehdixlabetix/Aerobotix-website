@@ -6,7 +6,7 @@ const Intro = () => {
     return (
         <FullScreenSection height={['100%', '100vh']} id="intro-section" justifyContent="center" alignItems="center">
             <VStack zIndex={1} spcaing={10}>
-                <Heading marginTop={["5%", "20%"]} color={'var(--title)'} fontSize={["xl", "5xl"]}>A little
+                <Heading marginTop={["5%", "25%"]} color={'var(--title)'} fontSize={["xl", "5xl"]}>A little
                     introduction</Heading>
                 <Text id="landing-text" margin="5% 4% 3% 4%"
                       style={{fontFamily: 'cursive', whiteSpace: 'pre-wrap'}} fontSize={["sm", "xl"]}>
@@ -23,7 +23,7 @@ const Intro = () => {
                     The club also offers its members the opportunity to participate in national and international
                     competitions, which allows them to acquire a lot of experience and skills.
                 </Text>
-                <Image marginBottom={['-15%', "10%"]} height={["80px", "200px"]} src="/robot.png"/>
+                <Image marginBottom={['-25%', "10%"]} height={["100px", "200px"]} src="/robott.png"/>
             </VStack>
         </FullScreenSection>
     )
