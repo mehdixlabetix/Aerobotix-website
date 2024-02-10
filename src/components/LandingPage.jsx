@@ -5,7 +5,7 @@ const LandingPage = () => {
     const width = window.innerWidth;
     return (
 
-        <FullScreenSection id="landing-section" justifyContent="center" alignItems="center">
+        <FullScreenSection  id="landing-section" justifyContent="center" alignItems="center">
             {width>760 &&
                 <video
                 rel={"preload"}

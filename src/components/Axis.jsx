@@ -8,7 +8,7 @@ const Axis = () => {
         <FullScreenSection id="axis-section" width="100%" justifyContent="center" alignItems="center">
             <Heading color="var(--title)" as="h1" size="4xl" padding="3% 3% 6% 3%"> Our Axis</Heading>
             <HStack spacing={[6,58]} align="center" >
-               <Card variant={'unstyled'} marginLeft={["8%","10%"]}  id="axis_cards"  >
+               <Card zIndex={1} variant={'unstyled'} marginLeft={["8%","10%"]}  id="axis_cards"  >
                    <VStack spacing="24px" align="center">
                            <Image marginTop="3%" borderRadius="10px" src="/robotics2.jpg" alt="robotics" width={["100%","70%"]} height={["100px","200px"]}  />
                            <Heading as="h1" size="xl" padding="2% 3% 0% 3%">Robotics</Heading>
@@ -25,7 +25,7 @@ const Axis = () => {
                             </Text>
                    </VStack>
                </Card>
-                <Card variant={'unstyled'} marginRight={["8%","10%"]} id="axis_cards"  ><VStack spacing="24px" align="center">
+                <Card zIndex={1} variant={'unstyled'} marginRight={["8%","10%"]} id="axis_cards"  ><VStack spacing="24px" align="center">
                     <Image marginTop="3%" filter="brightness(1.8)" borderRadius="10px" src="/aeronautics.jpg" alt="robotics" width={["100%","70%"]} height={["100px","200px"]} />
                     <Heading  as="h1" size="xl" padding="2% 3% 0% 3%">Aeronautics</Heading>
                     <Text textAlign={["left","center"]} fontSize={["s","l"]} justifyContent="center" padding="1% 3% 3% 3%">Aeronautics is the science or art involved with the study,

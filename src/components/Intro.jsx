@@ -5,7 +5,7 @@ import {Heading, Text, VStack,Image} from "@chakra-ui/react";
 const Intro = () => {
     return (
         <FullScreenSection height={['100%','100vh']}   id="intro-section" justifyContent="center" alignItems="center">
-           < VStack spcaing={10}>
+           <VStack zIndex={1} spcaing={10}>
             <Heading marginTop="5%" color={'var(--title)'} fontSize={["xl","5xl"]} >A little introduction</Heading>
             <Text id="landing-text" margin="7% 4% 3% 4%"
                   style={{fontFamily: 'cursive', whiteSpace: 'pre-wrap' }} fontSize={["sm","xl"]}>

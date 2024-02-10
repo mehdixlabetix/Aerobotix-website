@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {lazy, Suspense, useEffect} from 'react'
 import { Analytics } from '@vercel/analytics/react';
 import './App.css'
 import {ChakraProvider} from "@chakra-ui/react";
@@ -12,11 +12,15 @@ import Team from "./components/Team.jsx";
 import Intro from "./components/Intro.jsx";
 import Events from "./components/Events.jsx";
 import Eurobot from "./components/Eurobot.jsx";
+import VantaHalo from "vanta/src/vanta.halo.js";
+import VantaClouds from "vanta/src/vanta.clouds.js";
+import VantaClouds2 from "vanta/src/vanta.clouds2.js";
+import Particles from "./components/particles.jsx";
 
 function App() {
-    useEffect(() => {
+    /*useEffect(() => {
 
-        VantaNet({
+       setTimeout(()=> {VantaClouds2({
             el: "#main",
             mouseControls: true,
             touchControls: true,
@@ -32,7 +36,8 @@ function App() {
             spacing: 18.00
         })
 
-    }, [])
+    },50)}, [])*/
+
     return (
         <>
         <ChakraProvider>
@@ -42,9 +47,12 @@ function App() {
                 <Intro/>
                 <Axis/>
                 <ImageSlider/>
+
                 <Eurobot/>
+
                 <Events/>
                 <Team/>
+                <Particles/>
             </main>
 
             <Footer/>

@@ -63,7 +63,7 @@ const Team = () => {
     return (
         <FullScreenSection id="team-section"  justifyContent="center" alignItems="center">
             <Heading color="var(--title)" as="h1" size="2xl" padding="5% 3% 4% 3%"> Our Team</Heading>
-            <Card style={{transition:'all 0.5s'}} variant={'unstyled'} minW={["150px","220px"]} marginBottom="30px"
+            <Card zIndex={1} style={{transition:'all 0.5s'}} variant={'unstyled'} minW={["150px","220px"]} marginBottom="30px"
                  id="team-card">
                 <Avatar objectFit="contain" marginBottom="40px" size={["xl","2xl"]} src={TeamMembers[0].image} alt={TeamMembers[0].name}/>
                 <Heading as="h1"  fontSize={["lg","xl"]} marginBottom="20px">{TeamMembers[0].name}</Heading>
@@ -73,7 +73,7 @@ const Team = () => {
             <SimpleGrid width ={window.innerWidth-window.innerWidth/10} minChildWidth={['110px','220px']} spacing={["30px",'40px']} marginBottom="40px">
                 {  TeamMembers.slice(1,TeamMembers.length).map((member)=>{
                         return (
-                            <Card style={{transition:'all 0.5s'}} key={member.name} variant = {'unstyled'}
+                            <Card zIndex={1} style={{transition:'all 0.5s'}} key={member.name} variant = {'unstyled'}
                                    id="team-card">
                                 <Avatar objectFit="contain" marginBottom="20px" size={["xl","2xl"]} src={member.image} alt={member.name}/>
                                 <Heading as="h1" fontSize={["md","xl"]} marginBottom="20px">{member.name}</Heading>

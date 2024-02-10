@@ -62,6 +62,7 @@ const [currentImageIndex2, setCurrentImageIndex2] = useState(0 );
           <HStack width="100%"   spacing={[4,10]}>
               {displayedImages.map((img)=>{return(
                   <Image
+                      zIndex={1}
                       id="memories"
                       objectFit="fill"
                       key={img}
@@ -78,6 +79,7 @@ const [currentImageIndex2, setCurrentImageIndex2] = useState(0 );
               <Heading color="var(--title)" as="h1" size={["xl","2xl"]} padding="0% 2% 10% 2%"> Precious Memories</Heading>
 
                       <Image
+                          zIndex={1}
                           id="memories"
                           objectFit="fill"
                           key={images[currentImageIndex2]}

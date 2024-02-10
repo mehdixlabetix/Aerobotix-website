@@ -79,7 +79,7 @@ const Header = () => {
                                         />}
                                         {windowWidth<=760 &&   <FontAwesomeIcon
                                             icon={social.icon}
-                                            size='md'/>}
+                                            size='sm'/>}
                                     </a>
                                 )
                             })}

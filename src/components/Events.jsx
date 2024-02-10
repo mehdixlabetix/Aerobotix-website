@@ -9,7 +9,7 @@ const Events = () => {
                     <Card maxH={[550,250]} direction={{ base: 'column', xl: 'row' }}
                       overflow='hidden'
                       borderRadius="15px" maxW={["300px","1200px"]} backgroundColor="rgb(107, 146, 156)">
-                    <Image borderRadius="15px 0 0 15px" src="/robolympix2.jpg" alt="robolympix" height={["200px","300px"]}/>
+                    <Image zIndex={1}    borderRadius="15px 0 0 15px" src="/robolympix2.jpg" alt="robolympix" height={["200px","300px"]}/>
                     <VStack style={{margin:"2% 1% 2% 1%"}}>
                         <Heading marginBottom="5%" as="h2" size="xl">Robolympix</Heading>
                         <Text fontSize={12}>
@@ -28,7 +28,7 @@ const Events = () => {
                       overflow='hidden'
                       borderRadius="15px" maxW={["300px","1200px"]} maxH={[550,250]} backgroundColor="rgb(107, 146, 156)">
 
-                      <Image src="/aeroday.jpg" alt="aeroday"  height={["200px","300px"]}/>
+                      <Image zIndex={1} src="/aeroday.jpg" alt="aeroday"  height={["200px","300px"]}/>
                     <VStack style={{margin:"2% 1% 2% 1%"}}>
 
                         <Heading marginBottom="2%" as="h2" size="xl" >Aeroday</Heading>
