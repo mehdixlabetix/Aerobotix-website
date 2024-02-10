@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');:root {
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+
+:root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
@@ -11,7 +13,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    --title :#C91D20;
+    --title: #C91D20;
 }
 
 a {
@@ -73,33 +75,36 @@ button:focus,
 button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
-#axis_cards{
+
+#axis_cards {
     background-color: transparent;
     border-radius: 20px;
     height: 510px;
     transition: ease all 0.8s;
 
 }
-#axis_cards:hover
-{
-  scale: 1.2;
+
+#axis_cards:hover {
+    scale: 1.2;
 
 }
-#team-card{
 
-    background-color:rgba(174, 167, 151,0);
+#team-card {
+
+    background-color: rgba(174, 167, 151, 0);
     height: 300px;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     border-radius: 15px;
     padding: 5px;
 
 }
-#team-card:hover
-{
-  scale: 1.1;
+
+#team-card:hover {
+    scale: 1.1;
     transition: ease all 0.4s;
 }
+
 @media (prefers-color-scheme: light) {
     :root {
         color: #213547;
@@ -115,36 +120,38 @@ button:focus-visible {
     }
 
 }
-#memories{
-    border-radius: 10px;
-    height: 200px;
-    width: 300px;
-}
-@media(max-width: 768px){
+
+
+
+@media (max-width: 768px) {
     #landing-section {
         height: 250px;
     }
-    #image-section
-    {
+
+    #image-section {
         height: 500px;
 
     }
-    #memories{
-        height: 200px;
 
+    #memories {
+        height: 200px;
+        border-radius: 10px;
         max-width: 300px;
     }
-    #axis_cards{
+
+    #axis_cards {
         height: 200px;
 
 
     }
-    #axis-section{
+
+    #axis-section {
         height: 500px;
         font-size: 10px;
         margin-bottom: 50px;
     }
-    #team-card{
+
+    #team-card {
 
         height: 150px;
         border-radius: 15px;
