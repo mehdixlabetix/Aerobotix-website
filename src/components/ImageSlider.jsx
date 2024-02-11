@@ -53,6 +53,7 @@ const ImageSlider = () => {
                 <Image
                     zIndex={1}
                     style={{
+                        transition: 'ease all 1s',
                         borderRadius: '10px',
                         height: '200px',
                         width: windowWidth / 4 - windowWidth / 20,
@@ -67,10 +68,7 @@ const ImageSlider = () => {
         })
     );
     useEffect(() => {
-        // Add an interval for automatic image sliding
-        const intervalId = setInterval(handleNextImage, 3000); // Slide every 3 seconds
-
-        // Cleanup interval on component unmount
+        const intervalId = setInterval(handleNextImage, 3500);
         return () => clearInterval(intervalId);
     },);
 
