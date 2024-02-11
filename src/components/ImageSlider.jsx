@@ -60,8 +60,9 @@ const ImageSlider = () => {
         return (
             <FullScreenSection id="image-section" width={window.innerWidth - window.innerWidth / 10} height="100vh"
                                justifyContent="center" alignItems="center">
-                <Heading color="var(--title)" as="h1" size={["xl", "2xl"]} padding="0% 2% 10% 2%"> Precious
-                    Memories</Heading>
+                <Heading color="var(--title)" as="h1" size={["xl", "2xl"]} padding="0% 2% 10% 2%">
+                    Precious Memories
+                </Heading>
                 <HStack width="100%" spacing={[4, 10]}  justifyContent="center" alignItems="center">
                     {displayedImages.map((img) => {
                         return (
@@ -71,6 +72,7 @@ const ImageSlider = () => {
                                     borderRadius: '10px',
                                     height: '200px',
                                     width: windowWidth / 4 - windowWidth / 20,
+                                    filter:'drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.75))'
                                 }}
                                 objectFit="fill"
                                 key={img}
@@ -96,6 +98,9 @@ const ImageSlider = () => {
                     key={images[currentImageIndex2]}
                     src={images[currentImageIndex2]}
                     alt="Image"
+                    style={{
+                        filter:'drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.75))'
+                    }}
 
                 />
             </FullScreenSection>

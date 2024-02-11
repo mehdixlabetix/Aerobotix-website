@@ -11,7 +11,8 @@ const Axis = () => {
                 <Card zIndex={1} variant={'unstyled'} marginLeft={["8%", "10%"]} id="axis_cards">
                     <VStack spacing="24px" align="center">
                         <Image marginTop="3%" borderRadius="10px" src="/robotics2.jpg" alt="robotics"
-                               width={["100%", "70%"]} height={["100px", "200px"]}/>
+                               width={["100%", "70%"]} height={["100px", "200px"]}
+                        style={{ filter:'drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.75))'}}/>
                         <Heading as="h1" size="xl" padding="2% 3% 0% 3%">Robotics</Heading>
                         <Text textAlign={["left", "center"]} padding="2% 3% 3% 3%" fontSize={["s", "l"]}>
                             Robotics is an interdisciplinary branch of engineering and
@@ -30,7 +31,8 @@ const Axis = () => {
                 <Card zIndex={1} variant={'unstyled'} marginRight={["8%", "10%"]} id="axis_cards"><VStack spacing="24px"
                                                                                                           align="center">
                     <Image marginTop="3%" filter="brightness(1.8)" borderRadius="10px" src="/aeronautics.jpg"
-                           alt="robotics" width={["100%", "70%"]} height={["100px", "200px"]}/>
+                           alt="robotics" width={["100%", "70%"]} height={["100px", "200px"]}
+                           style={{ filter:'drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.75))'}}/>
                     <Heading as="h1" size="xl" padding="2% 3% 0% 3%">Aeronautics</Heading>
                     <Text textAlign={["left", "center"]} fontSize={["s", "l"]} justifyContent="center"
                           padding="1% 3% 3% 3%">Aeronautics is the science or art involved with the study,
