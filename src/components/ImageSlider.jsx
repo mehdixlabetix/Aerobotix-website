@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import {useEffect, useState} from "react";
 import aero1 from "/aero/aero1.jpg";
 import aero2 from "/aero/aero2.jpg";
 import aero3 from "/aero/aero3.jpg";
@@ -20,8 +20,8 @@ import {Heading, HStack, Image} from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection.jsx";
 
 const ImageSlider = () => {
-const [currentImageIndex, setCurrentImageIndex] = useState(0 );
-const [currentImageIndex2, setCurrentImageIndex2] = useState(0 );
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [currentImageIndex2, setCurrentImageIndex2] = useState(0);
 
     const images = [
         aero1,
@@ -54,40 +54,53 @@ const [currentImageIndex2, setCurrentImageIndex2] = useState(0 );
 
         // Cleanup interval on component unmount
         return () => clearInterval(intervalId);
-    }, );
+    },);
 
-  if (windowWidth>750){  return (
-      <FullScreenSection id="image-section" width={window.innerWidth-window.innerWidth/10} height="100vh" justifyContent="center" alignItems="center">
-          <Heading color="var(--title)" as="h1" size={["xl","2xl"]} padding="0% 2% 10% 2%"> Precious Memories</Heading>
-          <HStack width="100%"   spacing={[4,10]}>
-              {displayedImages.map((img)=>{return(
-                  <Image
-                      id="memories"
-                      objectFit="fill"
-                      key={img}
-                      src={img}
-                      alt="Image"
+    if (windowWidth > 750) {
+        return (
+            <FullScreenSection id="image-section" width={window.innerWidth - window.innerWidth / 10} height="100vh"
+                               justifyContent="center" alignItems="center">
+                <Heading color="var(--title)" as="h1" size={["xl", "2xl"]} padding="0% 2% 10% 2%"> Precious
+                    Memories</Heading>
+                <HStack width="100%" spacing={[4, 10]}  justifyContent="center" alignItems="center">
+                    {displayedImages.map((img) => {
+                        return (
+                            <Image
+                                zIndex={1}
+                                style={{
+                                    borderRadius: '10px',
+                                    height: '200px',
+                                    width: windowWidth / 4 - windowWidth / 20,
+                                }}
+                                objectFit="fill"
+                                key={img}
+                                src={img}
+                                alt="Image"
 
-                  />)})}
-          </HStack>
-      </FullScreenSection>
-  );}
-  else {
-      return (
-          <FullScreenSection id="image-section" width={window.innerWidth-window.innerWidth/10} height="100vh" justifyContent="center" alignItems="center">
-              <Heading color="var(--title)" as="h1" size={["xl","2xl"]} padding="0% 2% 10% 2%"> Precious Memories</Heading>
+                            />)
+                    })}
+                </HStack>
+            </FullScreenSection>
+        );
+    } else {
+        return (
+            <FullScreenSection id="image-section" width={window.innerWidth - window.innerWidth / 10} height="100vh"
+                               justifyContent="center" alignItems="center">
+                <Heading color="var(--title)" as="h1" size={["xl", "2xl"]} padding="0% 2% 10% 2%"> Precious
+                    Memories</Heading>
 
-                      <Image
-                          id="memories"
-                          objectFit="fill"
-                          key={images[currentImageIndex2]}
-                          src={images[currentImageIndex2]}
-                          alt="Image"
+                <Image
+                    zIndex={1}
+                    id="memories"
+                    objectFit="fill"
+                    key={images[currentImageIndex2]}
+                    src={images[currentImageIndex2]}
+                    alt="Image"
 
-                      />
-          </FullScreenSection>
-      );
-  }
+                />
+            </FullScreenSection>
+        );
+    }
 };
 
 export default ImageSlider;

@@ -1,4 +1,4 @@
-import  {useEffect, useRef} from 'react'
+import {useEffect, useRef} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import {faFacebook, faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
@@ -55,15 +55,15 @@ const Header = () => {
             ref={translation}
             zIndex={5}
         >
-            <Box color="white" maxWidth={["400px", "1280px"]} margin={["0 0","0 auto"]}>
+            <Box color="white" maxWidth={["400px", "1280px"]} margin={["0 0", "0 auto"]}>
                 <HStack
-                    px={[4,16]}
+                    px={[4, 16]}
                     py={4}
                     justifyContent="space-between"
                     alignItems="center"
                 >
                     <nav id="header-socials">
-                        <HStack spacing={[2,8]}>
+                        <HStack spacing={[2, 8]}>
                             {socials.map((social) => {
                                 return (
                                     <a
@@ -73,20 +73,20 @@ const Header = () => {
                                         key={social.name}
                                         href={social.url}
                                     >
-                                        {windowWidth>760 &&   <FontAwesomeIcon
+                                        {windowWidth > 760 && <FontAwesomeIcon
                                             icon={social.icon}
                                             size='2x'
                                         />}
-                                        {windowWidth<=760 &&   <FontAwesomeIcon
+                                        {windowWidth <= 760 && <FontAwesomeIcon
                                             icon={social.icon}
-                                            size='md'/>}
+                                            size='sm'/>}
                                     </a>
                                 )
                             })}
                         </HStack>
                     </nav>
                     <nav id="header-links">
-                            <HStack spacing={[2,8]} fontSize={[10,20]}>
+                        <HStack spacing={[2, 8]} fontSize={[10, 20]}>
                             <a href="#intro-section">Introduction</a>
                             <a href="#axis-section">Axis</a>
                             <a href="#eurobot-section">Eurobot</a>
