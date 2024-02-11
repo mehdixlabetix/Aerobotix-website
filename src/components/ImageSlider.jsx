@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import aero1 from "/aero/aero1.jpg";
 import aero2 from "/aero/aero2.jpg";
 import aero3 from "/aero/aero3.jpg";
@@ -47,7 +47,25 @@ const ImageSlider = () => {
         setCurrentImageIndex2((prevIndex) => (prevIndex + 1) % images.length);
     };
     const windowWidth = window.innerWidth;
+    const imagesMemoized= useMemo(() =>
+        displayedImages.map((img) => {
+            return (
+                <Image
+                    zIndex={1}
+                    style={{
+                        borderRadius: '10px',
+                        height: '200px',
+                        width: windowWidth / 4 - windowWidth / 20,
+                        filter:'drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.75))'
+                    }}
+                    objectFit="fill"
+                    key={img}
+                    src={img}
+                    alt="Image"
 
+                />)
+        })
+    );
     useEffect(() => {
         // Add an interval for automatic image sliding
         const intervalId = setInterval(handleNextImage, 3000); // Slide every 3 seconds
@@ -64,23 +82,7 @@ const ImageSlider = () => {
                     Precious Memories
                 </Heading>
                 <HStack width="100%" spacing={[4, 10]}  justifyContent="center" alignItems="center">
-                    {displayedImages.map((img) => {
-                        return (
-                            <Image
-                                zIndex={1}
-                                style={{
-                                    borderRadius: '10px',
-                                    height: '200px',
-                                    width: windowWidth / 4 - windowWidth / 20,
-                                    filter:'drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.75))'
-                                }}
-                                objectFit="fill"
-                                key={img}
-                                src={img}
-                                alt="Image"
-
-                            />)
-                    })}
+                    {imagesMemoized}
                 </HStack>
             </FullScreenSection>
         );

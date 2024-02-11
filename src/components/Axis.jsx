@@ -14,7 +14,7 @@ const Axis = () => {
                                width={["100%", "70%"]} height={["100px", "200px"]}
                         style={{ filter:'drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.75))'}}/>
                         <Heading as="h1" size="xl" padding="2% 3% 0% 3%">Robotics</Heading>
-                        <Text textAlign={["left", "center"]} padding="2% 3% 3% 3%" fontSize={["s", "l"]}>
+                        <Text textAlign={["left",'justify']} padding="2% 3% 3% 3%" fontSize={["s", "xl"]} w={["100%",'78%']}>
                             Robotics is an interdisciplinary branch of engineering and
                             science
                             that
@@ -34,8 +34,8 @@ const Axis = () => {
                            alt="robotics" width={["100%", "70%"]} height={["100px", "200px"]}
                            style={{ filter:'drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.75))'}}/>
                     <Heading as="h1" size="xl" padding="2% 3% 0% 3%">Aeronautics</Heading>
-                    <Text textAlign={["left", "center"]} fontSize={["s", "l"]} justifyContent="center"
-                          padding="1% 3% 3% 3%">Aeronautics is the science or art involved with the study,
+                    <Text textAlign={["left",'justify']} padding="2% 3% 3% 3%" fontSize={["s", "xl"]} w={["100%",'78%']}>
+                        Aeronautics is the science or art involved with the study,
                         design, and
                         manufacturing of air flight capable machines, and the techniques of operating aircraft and
                         rockets

@@ -1,7 +1,8 @@
 import FullScreenSection from "./FullScreenSection.jsx";
-import {Button, Card, CardFooter, Heading, Image, Text, VStack} from "@chakra-ui/react";
+import {Button, Card, CardFooter, Heading, Image, Text, VStack,useToast} from "@chakra-ui/react";
 
 const Events = () => {
+    const toast = useToast();
     return (
         <FullScreenSection paddingTop={"10%"} id="events-section" justifyContent="center" alignItems="center">
             <Heading color="var(--title)" as="h1" size="2xl" paddingBottom="5%">Events</Heading>
@@ -26,7 +27,14 @@ const Events = () => {
                     </VStack>
 
                     <CardFooter style={{justifyContent: "center", alignItems: "center"}}>
-                        <a href="https://robolympix.tn"><Button colorScheme="blackAlpha" variant="solid">View
+                        <a href="#events-section"><Button onClick={() =>
+                            toast({
+                                title: 'Website down.',
+                                description: "Sorry to inform you that the robolympix website is down, it will be back soon.",
+                                status: 'warning',
+                                duration: 3000,
+                                isClosable: true,
+                            })} colorScheme="blackAlpha" variant="solid">View
                             More</Button></a>
                     </CardFooter></Card>
                 <Card maxH={[550, 550,250]} direction={{base: 'column', md: 'row'}}
