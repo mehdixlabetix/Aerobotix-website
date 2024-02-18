@@ -4,6 +4,7 @@ import cld from "./Cloudinary.jsx";
 
 const LandingPage = () => {
     const vidUrl = cld.video("auo8mygp5zv90rextntz").quality("auto").format('auto').toURL();
+    const logoUrl = cld.image("logo_aerobotix").quality("auto").format('auto').toURL();
     const width = window.innerWidth;
     return (
 
@@ -38,7 +39,7 @@ const LandingPage = () => {
                 <source src="vid.mp4" type="video/mp4"/>
             </video>}
             <VStack height={["200px", "100vh"]} justifyContent="center" alignItems='center' spcaing={24} zIndex={2}>
-                <Image marginTop={["30%", "0%"]} src="/logo_aerobotix.png" alt="Aerobotix" width={["150px", "650px"]}
+                <Image marginTop={["30%", "0%"]} src={logoUrl} alt="Aerobotix" width={["150px", "650px"]}
                        height={["50px", "180px"]}/>
                 <Heading fontSize={["l", "5xl"]} color="white" fontFamily={'Mr Dafoe'}>Learn Create Innovate</Heading>
             </VStack>

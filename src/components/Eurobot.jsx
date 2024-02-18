@@ -1,14 +1,17 @@
 import FullScreenSection from "./FullScreenSection.jsx";
 import {Button, Heading, HStack, Image, Text, VStack} from "@chakra-ui/react";
+import cld from "./Cloudinary.jsx";
 
 
 const Eurobot = () => {
     const windowWidth = window.innerWidth;
+    const eurobotUrl = cld.image("eurobot").quality("auto").format('auto').toURL();
+
     if (windowWidth > 750) {
         return (
             <FullScreenSection backgroundColor="#111512" id='eurobot-section' height={["300px", "100vh"]}>
                 <HStack spacing={[2, 8]} width="100%" height="100%" justifyContent="center" alignItems="center">
-                    <Image marginLeft="auto" zIndex={1} width={["67%", "50%", "60%"]} height="100%" src="/euro.jpg"
+                    <Image marginLeft="auto" zIndex={1} width={["67%", "50%", "60%"]} height="100%" src={eurobotUrl}
                            alt="Eurobot"/>
                     <VStack spacing={[2, 40]}>
                         <Heading color={"white"} as="h1" size={["lg", "xl"]}>Eurobot</Heading>

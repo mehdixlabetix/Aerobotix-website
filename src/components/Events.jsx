@@ -1,8 +1,11 @@
 import FullScreenSection from "./FullScreenSection.jsx";
 import {Button, Card, CardFooter, Heading, Image, Text, useToast, VStack} from "@chakra-ui/react";
+import cld from "./Cloudinary.jsx";
 
 const Events = () => {
     const toast = useToast();
+    const robolympixUrl = cld.image("robolympix").quality("auto").format('auto').toURL();
+    const aerodayUrl = cld.image("aeroday").quality("auto").format('auto').toURL();
     return (
         <FullScreenSection paddingTop={"10%"} id="events-section" justifyContent="center" alignItems="center">
             <Heading color="var(--title)" as="h1" size="2xl" paddingBottom="5%">Events</Heading>
@@ -13,7 +16,7 @@ const Events = () => {
                       style={{
                           boxShadow: "7px 7px 10px 0 rgba(107, 146, 156, 0.7)",
                       }}>
-                    <Image zIndex={1} borderRadius="15px 0 0 15px" src="/robolympix2.jpg" alt="robolympix"
+                    <Image zIndex={1} borderRadius="15px 0 0 15px" src={robolympixUrl} alt="robolympix"
                            height={["200px", "300px"]}/>
                     <VStack style={{margin: "2% 1% 2% 1%"}}>
                         <Heading marginBottom="5%" as="h2" size="xl">Robolympix</Heading>
@@ -43,7 +46,7 @@ const Events = () => {
                       style={{
                           boxShadow: "7px 7px 10px 0 rgba(107, 146, 156, 0.7)",
                       }}>
-                    <Image zIndex={1} src="/aeroday.jpg" alt="aeroday" height={["200px", "300px"]}/>
+                    <Image zIndex={1} src={aerodayUrl} alt="aeroday" height={["200px", "300px"]}/>
                     <VStack style={{margin: "2% 1% 2% 1%"}}>
 
                         <Heading marginBottom="2%" as="h2" size="xl">Aeroday</Heading>

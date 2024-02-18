@@ -1,8 +1,11 @@
 import FullScreenSection from "./FullScreenSection.jsx";
 import {Heading, Image, Text, VStack} from "@chakra-ui/react";
+import cld from "./Cloudinary.jsx";
 
 
 const Intro = () => {
+    const robotUrl = cld.image("robot").quality("auto").format('auto').toURL();
+
     return (
         <FullScreenSection height={['100%', '100vh']} id="intro-section" justifyContent="center" alignItems="center">
             <VStack zIndex={1} spcaing={10}>
@@ -23,7 +26,7 @@ const Intro = () => {
                     The club also offers its members the opportunity to participate in national and international
                     competitions, which allows them to acquire a lot of experience and skills.
                 </Text>
-                <Image marginBottom={['-25%', "10%"]} height={["100px", "200px"]} src="/robott.png" alt='little robots'/>
+                <Image marginBottom={['-25%', "10%"]} height={["100px", "200px"]} src={robotUrl} alt='little robots'/>
             </VStack>
         </FullScreenSection>
     )
