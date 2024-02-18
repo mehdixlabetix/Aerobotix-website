@@ -6,15 +6,16 @@ const Axis = () => {
     return (
 
         <FullScreenSection id="axis-section" width="100%" justifyContent="center" alignItems="center">
-            <Heading color="var(--title)" as="h1" size={["xl","4xl"]} padding="7% 3% 6% 3%"> Our Axis</Heading>
+            <Heading color="var(--title)" as="h1" size={["xl", "4xl"]} padding="7% 3% 6% 3%"> Our Axis</Heading>
             <HStack spacing={[6, 58]} align="center">
                 <Card zIndex={1} variant={'unstyled'} marginLeft={["8%", "10%"]} id="axis_cards">
                     <VStack spacing="24px" align="center">
                         <Image marginTop="3%" borderRadius="10px" src="/robotics2.jpg" alt="robotics"
                                width={["100%", "70%"]} height={["100px", "200px"]}
-                        style={{ filter:'drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.75))'}}/>
+                               style={{filter: 'drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.75))'}}/>
                         <Heading as="h1" size="xl" padding="2% 3% 0% 3%">Robotics</Heading>
-                        <Text textAlign={["left",'justify']} padding="2% 3% 3% 3%" fontSize={["s", "xl"]} w={["100%",'78%']}>
+                        <Text textAlign={["left", 'justify']} padding="2% 3% 3% 3%" fontSize={["s", "xl"]}
+                              w={["100%", '78%']}>
                             Robotics is an interdisciplinary branch of engineering and
                             science
                             that
@@ -31,10 +32,11 @@ const Axis = () => {
                 <Card zIndex={1} variant={'unstyled'} marginRight={["8%", "10%"]} id="axis_cards"><VStack spacing="24px"
                                                                                                           align="center">
                     <Image marginTop="3%" filter="brightness(1.8)" borderRadius="10px" src="/aeronautics.jpg"
-                           alt="robotics" width={["100%", "70%"]} height={["100px", "200px"]}
-                           style={{ filter:'drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.75))'}}/>
+                           alt="aeronautics" width={["100%", "70%"]} height={["100px", "200px"]}
+                           style={{filter: 'drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.75))'}}/>
                     <Heading as="h1" size="xl" padding="2% 3% 0% 3%">Aeronautics</Heading>
-                    <Text textAlign={["left",'justify']} padding="2% 3% 3% 3%" fontSize={["s", "xl"]} w={["100%",'78%']}>
+                    <Text textAlign={["left", 'justify']} padding="2% 3% 3% 3%" fontSize={["s", "xl"]}
+                          w={["100%", '78%']}>
                         Aeronautics is the science or art involved with the study,
                         design, and
                         manufacturing of air flight capable machines, and the techniques of operating aircraft and

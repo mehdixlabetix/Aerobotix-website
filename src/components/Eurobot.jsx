@@ -6,9 +6,10 @@ const Eurobot = () => {
     const windowWidth = window.innerWidth;
     if (windowWidth > 750) {
         return (
-            <FullScreenSection backgroundColor="#111512" id='eurobot-section'  height={["300px", "100vh"]}>
-                <HStack  spacing={[2, 8]} width="100%" height="100%" justifyContent="center" alignItems="center">
-                    <Image   marginLeft="auto" zIndex={1} width={["67%", "50%","60%"]}  height="100%" src="/euro.jpg" alt="Eurobot"/>
+            <FullScreenSection backgroundColor="#111512" id='eurobot-section' height={["300px", "100vh"]}>
+                <HStack spacing={[2, 8]} width="100%" height="100%" justifyContent="center" alignItems="center">
+                    <Image marginLeft="auto" zIndex={1} width={["67%", "50%", "60%"]} height="100%" src="/euro.jpg"
+                           alt="Eurobot"/>
                     <VStack spacing={[2, 40]}>
                         <Heading color={"white"} as="h1" size={["lg", "xl"]}>Eurobot</Heading>
 
