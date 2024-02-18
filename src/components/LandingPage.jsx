@@ -1,7 +1,9 @@
 import FullScreenSection from "./FullScreenSection.jsx";
 import {Heading, Image, VStack} from "@chakra-ui/react";
+import cld from "./Cloudinary.jsx";
 
 const LandingPage = () => {
+    const vidUrl = cld.video("auo8mygp5zv90rextntz").quality("auto").format('auto').toURL();
     const width = window.innerWidth;
     return (
 
@@ -20,7 +22,7 @@ const LandingPage = () => {
                         transform: "translate(-50.05%, -50%)",
 
                     }} autoPlay muted loop id="myVideo">
-                    <source src="vid.mp4" type="video/mp4"/>
+                    <source rel={'preload'} src={vidUrl} type="video/mp4"/>
                 </video>}
             {width < 760 && <video
                 preload={"auto"}
