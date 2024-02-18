@@ -33,7 +33,7 @@ a:hover {
 }
 .scroller .scroller__inner {
   flex-wrap: nowrap;
-  animation: scroll 150s linear infinite;
+  animation: scroll 120s linear infinite;
  width:max-content;
     transition: ease all 0.8s;
 
