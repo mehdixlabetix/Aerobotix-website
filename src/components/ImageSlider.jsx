@@ -1,4 +1,4 @@
-import {useEffect, useMemo, useState} from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 import aero1 from "/aero/aero1.jpg";
 import aero2 from "/aero/aero2.jpg";
 import aero3 from "/aero/aero3.jpg";
@@ -20,8 +20,6 @@ import {Heading, HStack, Image} from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection.jsx";
 
 const ImageSlider = () => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [currentImageIndex2, setCurrentImageIndex2] = useState(0);
 
     const images = [
         aero1,
@@ -41,23 +39,20 @@ const ImageSlider = () => {
         aero15,
         aero16,
     ];
-    const displayedImages = images.slice(currentImageIndex, currentImageIndex + 4);
-    const handleNextImage = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 4) % images.length);
-        setCurrentImageIndex2((prevIndex) => (prevIndex + 1) % images.length);
-    };
+    const scrollers=useRef(null);
+    const scrollerInner=useRef(null);
     const windowWidth = window.innerWidth;
     const imagesMemoized= useMemo(() =>
-        displayedImages.map((img) => {
+        images.map((img) => {
             return (
                 <Image
                     zIndex={1}
+                    height={['150px','200px']}
+                    maxW={ [windowWidth/2,windowWidth /6]}
                     style={{
-                        transition: 'ease all 1s',
                         borderRadius: '10px',
-                        height: '200px',
-                        width: windowWidth / 4 - windowWidth / 20,
-                        filter:'drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.75))'
+                        minWidth: windowWidth / 5,
+                        filter:'drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.75))',
                     }}
                     objectFit="fill"
                     key={img}
@@ -67,45 +62,44 @@ const ImageSlider = () => {
                 />)
         })
     );
-    useEffect(() => {
-        const intervalId = setInterval(handleNextImage, 3500);
-        return () => clearInterval(intervalId);
-    },);
-
-    if (windowWidth > 750) {
+   useEffect(()=>{ if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    addAnimation();
+    }},[]);
+    function addAnimation(){
+        if(scrollers.current)
+        scrollers.current.setAttribute('data-animated', true);
+        if (scrollerInner.current) {
+            const scrollerInnerContent = Array.from(scrollerInner.current.children);
+            scrollerInnerContent.forEach((child) => {
+                const duplicatedItem = child.cloneNode(true);
+                duplicatedItem.setAttribute('aria-hidden', 'true');
+                scrollerInner.current.appendChild(duplicatedItem);
+            });
+        }
+    }
         return (
             <FullScreenSection id="image-section" width={window.innerWidth - window.innerWidth / 10} height="100vh"
                                justifyContent="center" alignItems="center">
                 <Heading color="var(--title)" as="h1" size={["xl", "2xl"]} padding="0% 2% 10% 2%">
                     Precious Memories
                 </Heading>
-                <HStack width="100%" spacing={[4, 10]}  justifyContent="center" alignItems="center">
-                    {imagesMemoized}
-                </HStack>
-            </FullScreenSection>
-        );
-    } else {
-        return (
-            <FullScreenSection id="image-section" width={window.innerWidth - window.innerWidth / 10} height="100vh"
-                               justifyContent="center" alignItems="center">
-                <Heading color="var(--title)" as="h1" size={["xl", "2xl"]} padding="0% 2% 10% 2%"> Precious
-                    Memories</Heading>
-
-                <Image
-                    zIndex={1}
-                    id="memories"
-                    objectFit="fill"
-                    key={images[currentImageIndex2]}
-                    src={images[currentImageIndex2]}
-                    alt="Image"
+                <div className="scroller"
+                     ref={scrollers}
+                style={{
+                    maxWidth: windowWidth - windowWidth / 10,
+                }}>
+                    <div className='scroller__inner'
+                        ref={scrollerInner}
                     style={{
-                        filter:'drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.75))'
-                    }}
+                        display: 'flex',
+                        gap:'1rem',
+                        paddingBlock:'1rem',
 
-                />
+                    }}>
+                        {imagesMemoized}
+                    </div>
+                </div>
             </FullScreenSection>
-        );
-    }
-};
+        );}
 
 export default ImageSlider;

@@ -8,7 +8,7 @@ import LandingPage from "./components/LandingPage.jsx";
 import Intro from "./components/Intro.jsx";
 import Particles from "./components/particles.jsx";
 import Axis from "./components/Axis.jsx";
-import ImageSlider from "./components/ImageSlider.jsx";
+import NewImageSlider from "./components/ImageSlider.jsx";
 
 function App() {
     const LazyEurobot = lazy(() => import('./components/Eurobot.jsx'))
@@ -21,7 +21,7 @@ function App() {
                 <LandingPage/>
                 <Intro/>
                 <Axis/>
-                <ImageSlider/>
+                <NewImageSlider/>
                 <Suspense fallback={<div>Loading...</div>}>
                     <LazyEurobot/>
                 </Suspense>
