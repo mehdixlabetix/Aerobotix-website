@@ -1,65 +1,66 @@
 import FullScreenSection from "./FullScreenSection.jsx";
 import {Avatar, Card, Heading, SimpleGrid} from "@chakra-ui/react";
+import cld from "./Cloudinary.jsx";
 
 const Team = () => {
     const TeamMembers = [
         {
             name: "Mehdi Cherif",
             role: "President",
-            image: "/comité/mehdi2.jpg",
+            image:cld.image("Team/mehdi").quality("auto").format('auto').toURL(),
         },
         {
             name: "Rawaa Knaissi",
             role: "Administrative Vice President ",
-            image: "/comité/rawaa.jpg",
+            image:cld.image("Team/rawaa").quality("auto").format('auto').toURL() ,
         }
         ,
         {
             name: "Mohamed Moussi",
             role: "Technical Vice President ",
-            image: "/comité/hamma.jpg",
+            image: cld.image("Team/hama").quality("auto").format('auto').toURL(),
         },
         {
             name: "Oussama Darouez",
             role: "Projects Manager",
-            image: "/comité/oussama.jpg",
+            image: cld.image("Team/oussama").quality("auto").format('auto').toURL(),
         },
         {
             name: "Mostfa Ghalleb",
             role: "Training Manager",
-            image: "/comité/mostfa.jpg",
+            image: cld.image("Team/mostfa").quality("auto").format('auto').toURL(),
         },
         {
             name: "Amine BelhajAmor",
             role: "Aeronautics Manager",
-            image: "/comité/amine.jpg",
+            image: cld.image("Team/amine").quality("auto").format('auto').toURL(),
         },
         {
             name: "Maha Grami",
             role: "Logistics Manager",
-            image: "/comité/maha.jpg",
+            image: cld.image("Team/maha").quality("auto").format('auto').toURL(),
         },
         {
             name: 'Nada Abidi',
             role: 'Human Resources Manager',
-            image: '/comité/nadaRH.jpg',
+            image: cld.image("Team/nadaRH").quality("auto").format('auto').toURL(),
         }
         ,
         {
             name: 'Nada Hammami',
             role: 'Sponsoring Manager',
-            image: '/comité/nadaSP.jpg',
+            image: cld.image("Team/nadaSponso").quality("auto").format('auto').toURL(),
         }
         ,
         {
             name: 'Dorra Saadallah',
             role: 'Treasurer',
-            image: '/comité/dorra.jpg',
+            image: cld.image("Team/dorra").quality("auto").format('auto').toURL(),
         },
         {
             name: 'Omar Chouchane',
             role: 'Media Manager',
-            image: '/comité/omar.jpg',
+            image: cld.image("Team/omar").quality("auto").format('auto').toURL(),
         }
     ]
     return (

@@ -5,7 +5,7 @@ import cld from "./Cloudinary.jsx";
 
 const Eurobot = () => {
     const windowWidth = window.innerWidth;
-    const eurobotUrl = cld.image("eurobot").quality("auto").format('auto').toURL();
+    const eurobotUrl = cld.image("eurobot").quality('auto').toURL();
 
     if (windowWidth > 750) {
         return (
@@ -35,7 +35,7 @@ const Eurobot = () => {
     } else {
         return (<FullScreenSection backgroundColor="#111512" id='eurobot-section' height={["750px", "100vh"]}>
             <VStack spacing={[2, 8]} width="100%" height="100%" justifyContent="center" alignItems="center">
-                <Image zIndex={1} width={['100%', "50%"]} height="90%" src="/euro.jpg" alt="Eurobot"/>
+                <Image zIndex={1} width={['100%', "50%"]} height="90%" src={eurobotUrl} alt="Eurobot"/>
                 <VStack spacing={[6, 24]}>
                     <Heading color={"white"} as="h1" size={["xl", "xl"]}>Eurobot</Heading>
 

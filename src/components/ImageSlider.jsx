@@ -2,6 +2,7 @@ import {useEffect, useMemo, useRef} from "react";
 
 import {Heading, Image} from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection.jsx";
+import cld from "./Cloudinary.jsx";
 
 const ImageSlider = () => {
     const scrollers = useRef(null);
@@ -10,22 +11,22 @@ const ImageSlider = () => {
     const imagesMemoized = useMemo(() =>{
 
         const images = [
-            "/aero/aero1.jpg",
-            "/aero/aero2.jpg",
-            "/aero/aero3.jpg",
-            "/aero/aero4.jpg",
-            "/aero/aero5.jpg",
-            "/aero/aero6.jpg",
-            "/aero/aero7.jpg",
-            "/aero/aero8.jpg",
-            "/aero/aero9.jpg",
-            "/aero/aero10.jpg",
-            "/aero/aero11.jpg",
-            "/aero/aero12.jpg",
-            "/aero/aero13.jpg",
-            "/aero/aero14.jpg",
-            "/aero/aero15.jpg",
-            "/aero/aero16.jpg",
+           cld.image('aero/aero1').quality('auto').format('auto').toURL(),
+              cld.image('aero/aero2').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero3').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero4').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero5').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero6').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero7').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero8').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero9').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero10').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero11').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero12').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero13').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero14').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero15').quality('auto').format('auto').toURL(),
+                cld.image('aero/aero16').quality('auto').format('auto').toURL(),
         ];
         return images.map((img) => (
             <Image
