@@ -20,7 +20,7 @@ const LandingPage = () => {
                         top: "6.5%",
                         height: "100vh",
                         objectFit: "cover",
-                        transform: "translate(-50.05%, -50%)",
+                        transform: "translate(-50%, -50%)",
 
                     }} autoPlay muted loop id="myVideo">
                     <source rel={'preload'} src={vidUrl} type="video/mp4"/>
@@ -36,7 +36,7 @@ const LandingPage = () => {
                     objectFit: "contain",
                     transform: "translate(-50%, -50%)",
                 }} autoPlay muted loop id="myVideo">
-                <source src="vid.mp4" type="video/mp4"/>
+                <source src={vidUrl} type="video/mp4"/>
             </video>}
             <VStack height={["200px", "100vh"]} justifyContent="center" alignItems='center' spcaing={24} zIndex={2}>
                 <Image  rel={'preload'} marginTop={["30%", "0%"]} src={logoUrl} alt="Aerobotix" width={["150px", "650px"]}
