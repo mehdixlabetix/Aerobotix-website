@@ -11,7 +11,7 @@ const Eurobot = () => {
         return (
             <FullScreenSection backgroundColor="#111512" id='eurobot-section' height={["300px", "100vh"]}>
                 <HStack spacing={[2, 8]} width="100%" height="100%" justifyContent="center" alignItems="center">
-                    <Image marginLeft="auto" zIndex={1} width={["67%", "50%", "60%"]} height="100%" src={eurobotUrl}
+                    <Image loading={"lazy"} marginLeft="auto" zIndex={1} width={["67%", "50%", "60%"]} height="100%" src={eurobotUrl}
                            alt="Eurobot"/>
                     <VStack spacing={[2, 40]}>
                         <Heading color={"white"} as="h1" size={["lg", "xl"]}>Eurobot</Heading>
@@ -35,7 +35,7 @@ const Eurobot = () => {
     } else {
         return (<FullScreenSection backgroundColor="#111512" id='eurobot-section' height={["750px", "100vh"]}>
             <VStack spacing={[2, 8]} width="100%" height="100%" justifyContent="center" alignItems="center">
-                <Image zIndex={1} width={['100%', "50%"]} height="90%" src={eurobotUrl} alt="Eurobot"/>
+                <Image loading={"lazy"} zIndex={1} width={['100%', "50%"]} height="90%" src={eurobotUrl} alt="Eurobot"/>
                 <VStack spacing={[6, 24]}>
                     <Heading color={"white"} as="h1" size={["xl", "xl"]}>Eurobot</Heading>
 

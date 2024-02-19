@@ -69,7 +69,7 @@ const Team = () => {
             <Card zIndex={1} style={{transition: 'all 0.5s'}} variant={'unstyled'} minW={["150px", "220px"]}
                   marginBottom="30px"
                   id="team-card">
-                <Avatar objectFit="contain" marginBottom="40px" size={["xl", "2xl"]} src={TeamMembers[0].image}
+                <Avatar loading={"lazy"} objectFit="contain" marginBottom="40px" size={["xl", "2xl"]} src={TeamMembers[0].image}
                         alt={TeamMembers[0].name}/>
                 <Heading as="h1" fontSize={["lg", "xl"]} marginBottom="20px">{TeamMembers[0].name}</Heading>
                 <Heading as="h3" fontSize="sm " fontStyle="italic">{TeamMembers[0].role}</Heading>
@@ -82,7 +82,7 @@ const Team = () => {
                     return (
                         <Card zIndex={1} style={{transition: 'all 0.5s'}} key={member.name} variant={'unstyled'}
                               id="team-card">
-                            <Avatar objectFit="contain" marginBottom="20px" size={["xl", "2xl"]} src={member.image}
+                            <Avatar loading={"lazy"} objectFit="contain" marginBottom="20px" size={["xl", "2xl"]} src={member.image}
                                     alt={member.name}/>
                             <Heading as="h1" fontSize={["md", "xl"]} marginBottom="20px">{member.name}</Heading>
                             <Heading as="h3" fontSize={['11px', "sm "]} fontStyle="italic">{member.role}</Heading>

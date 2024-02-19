@@ -30,6 +30,7 @@ const ImageSlider = () => {
         ];
         return images.map((img) => (
             <Image
+                loading={'lazy'}
                 zIndex={1}
                 height={['150px', '200px']}
                 maxW={[windowWidth / 2, windowWidth / 6]}

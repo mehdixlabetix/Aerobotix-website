@@ -27,6 +27,7 @@ const LandingPage = () => {
                 </video>}
             {width < 760 && <video
                 preload={"auto"}
+                rel={"preload"}
                 style={{
                     position: "absolute",
                     width: "100%",
@@ -39,7 +40,7 @@ const LandingPage = () => {
                 <source src={vidUrl} type="video/mp4"/>
             </video>}
             <VStack height={["200px", "100vh"]} justifyContent="center" alignItems='center' spcaing={24} zIndex={2}>
-                <Image  rel={'preload'} marginTop={["30%", "0%"]} src={logoUrl} alt="Aerobotix" width={["150px", "650px"]}
+                <Image loading={'eager'}  rel={'preload'} marginTop={["30%", "0%"]} src={logoUrl} alt="Aerobotix" width={["150px", "650px"]}
                        height={["50px", "180px"]}/>
                 <Heading fontSize={["l", "5xl"]} color="white" fontFamily={'Mr Dafoe'}>Learn Create Innovate</Heading>
             </VStack>
