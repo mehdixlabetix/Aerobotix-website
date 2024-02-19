@@ -16,7 +16,7 @@ const Events = () => {
                       style={{
                           boxShadow: "7px 7px 10px 0 rgba(107, 146, 156, 0.7)",
                       }}>
-                    <Image zIndex={1} borderRadius="15px 0 0 15px" src={robolympixUrl} alt="robolympix"
+                    <Image loading={'lazy'} zIndex={1} borderRadius="15px 0 0 15px" src={robolympixUrl} alt="robolympix"
                            height={["200px", "300px"]}/>
                     <VStack style={{margin: "2% 1% 2% 1%"}}>
                         <Heading marginBottom="5%" as="h2" size="xl">Robolympix</Heading>
@@ -46,7 +46,7 @@ const Events = () => {
                       style={{
                           boxShadow: "7px 7px 10px 0 rgba(107, 146, 156, 0.7)",
                       }}>
-                    <Image zIndex={1} src={aerodayUrl} alt="aeroday" height={["200px", "300px"]}/>
+                    <Image loading={'lazy'} zIndex={1} src={aerodayUrl} alt="aeroday" height={["200px", "300px"]}/>
                     <VStack style={{margin: "2% 1% 2% 1%"}}>
 
                         <Heading marginBottom="2%" as="h2" size="xl">Aeroday</Heading>
