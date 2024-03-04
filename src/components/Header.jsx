@@ -92,6 +92,7 @@ const Header = () => {
                             <a href="#eurobot-section">Eurobot</a>
                             <a href="#events-section">Events</a>
                             <a href="#team-section">Team</a>
+                            <a href="https://aerobotix.vercel.app">Join us</a>
                         </HStack>
                     </nav>
                 </HStack>
