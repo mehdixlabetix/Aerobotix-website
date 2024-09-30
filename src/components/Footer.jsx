@@ -13,7 +13,7 @@ const Footer = () => {
                     maxWidth="1024px"
                     height={16}
                 >
-                    <p>Aerobotix • © 2023</p>
+                    <p>Aerobotix • © 2024</p>
                 </Flex>
             </footer>
         </Box>
