@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AeRobotiX">
+  <defs>
+    <linearGradient id="brand" x1="7" y1="8" x2="57" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#23a9e0" />
+      <stop offset="0.5" stop-color="#0c70b7" />
+      <stop offset="0.5" stop-color="#ee2028" />
+      <stop offset="1" stop-color="#ff4c52" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#06080d" />
+  <path d="M12 47 28.5 14h7L52 47h-9l-3.4-7.4H24.1L20.8 47H12Zm15.3-14.7h9.2L32 22.1l-4.7 10.2Z" fill="url(#brand)" />
+  <circle cx="49" cy="15" r="4" fill="#ee2028" />
+</svg>

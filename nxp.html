@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Discover AeRobotiX INSAT's NXP Cup program: an autonomous lane-following vehicle powered by computer vision, embedded intelligence, and real-time control."
+    />
+    <meta name="theme-color" content="#06080d" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aerobotix.tn/nxp" />
+    <meta property="og:title" content="NXP Cup — AeRobotiX INSAT" />
+    <meta property="og:description" content="An autonomous vehicle that sees the line, decides in real time, and owns the curve." />
+    <meta property="og:image" content="https://aerobotix.tn/comps/NXP%20Cup/team%201st%20place%20nxp%20cup.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>NXP Cup — AeRobotiX INSAT</title>
+    <link rel="canonical" href="https://aerobotix.tn/nxp" />
+    <link rel="icon" href="./logo-removebg-preview.png" type="image/png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./competition.css" />
+    <script src="./app.js" defer></script>
+    <script src="./competition.js" defer></script>
+  </head>
+  <body class="competition-page nxp-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+    <div class="page-noise" aria-hidden="true"></div>
+    <div class="pointer-aura" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand competition-brand" href="./index.html" aria-label="AeRobotiX home">
+        <img src="./logo-removebg-preview.png" alt="" />
+      </a>
+      <nav class="desktop-nav" aria-label="NXP Cup page navigation">
+        <a href="./index.html">Home</a>
+        <a href="#challenge">Challenge</a>
+        <a href="#system">System</a>
+        <a href="#gallery">Gallery</a>
+        <a href="./eurobot.html">Eurobot</a>
+      </nav>
+      <a class="header-platform magnetic" href="./partners.html#partner-contact">
+        Partner with us <span aria-hidden="true">↗</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav aria-label="Mobile navigation">
+        <a href="./index.html"><span>00</span> Home</a>
+        <a href="#challenge"><span>01</span> Challenge</a>
+        <a href="#system"><span>02</span> System</a>
+        <a href="#gallery"><span>03</span> Gallery</a>
+        <a href="./eurobot.html"><span>04</span> Eurobot</a>
+      </nav>
+      <div class="mobile-menu-meta">
+        <a href="mailto:aerobotix@insat.ucar.tn">aerobotix@insat.ucar.tn</a>
+        <p>INSAT · Tunis, Tunisia</p>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <section class="competition-hero" id="top" aria-labelledby="page-title">
+        <div class="competition-hero-copy">
+          <a class="competition-back" href="./index.html#competitions"><span aria-hidden="true">←</span> International arenas</a>
+          <p class="competition-kicker reveal" data-reveal>NXP Cup · Autonomous mobility</p>
+          <h1 id="page-title" class="reveal" data-reveal data-delay="80">
+            See the line. <span>Own the curve.</span>
+          </h1>
+          <p class="competition-hero-lead reveal" data-reveal data-delay="150">
+            An autonomous racing robot that transforms camera frames into
+            steering decisions—combining computer vision, embedded processing,
+            and control in a real-time pursuit of speed and precision.
+          </p>
+          <div class="competition-actions reveal" data-reveal data-delay="220">
+            <a class="button button-primary magnetic" href="#gallery">Explore the journey <span class="button-arrow" aria-hidden="true">↘</span></a>
+            <a class="button button-ghost magnetic" href="https://nxpcup.nxp.com/" target="_blank" rel="noreferrer">Official competition <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="competition-facts reveal" data-reveal data-delay="280" aria-label="NXP Cup characteristics">
+            <div><strong>1st place</strong><span>National qualifications · 2025</span></div>
+            <div><strong>1st place</strong><span>National qualifications · 2026</span></div>
+            <div><strong>2nd place</strong><span>National qualifications · 2026</span></div>
+          </div>
+        </div>
+
+        <div class="competition-visual reveal" data-reveal data-delay="120">
+          <div class="visual-shell" data-tilt>
+            <img
+              src="./comps/NXP%20Cup/team%201st%20place%20nxp%20cup.jpg"
+              alt="AeRobotiX NXP Cup autonomous vehicle team"
+              width="2048"
+              height="1932"
+              fetchpriority="high"
+            />
+            <canvas class="competition-simulation" data-simulation="nxp" aria-hidden="true"></canvas>
+            <div class="visual-hud" aria-hidden="true"><span><i></i> Vision locked</span></div>
+            <div class="visual-title"><strong>NXP Cup</strong><span>Perception · Control · Speed</span></div>
+          </div>
+          <div class="visual-orbit" aria-hidden="true"><i></i></div>
+        </div>
+      </section>
+
+      <div class="competition-ticker" aria-label="NXP Cup engineering disciplines">
+        <div class="competition-ticker-track">
+          <span>Computer vision</span><i></i><span>Lane detection</span><i></i><span>Embedded AI</span><i></i><span>Control</span><i></i><span>Speed</span><i></i><span>Precision</span><i></i>
+          <span aria-hidden="true">Computer vision</span><i aria-hidden="true"></i><span aria-hidden="true">Lane detection</span><i aria-hidden="true"></i><span aria-hidden="true">Embedded AI</span><i aria-hidden="true"></i><span aria-hidden="true">Control</span><i aria-hidden="true"></i><span aria-hidden="true">Speed</span><i aria-hidden="true"></i><span aria-hidden="true">Precision</span><i aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <section class="competition-section section-shell" id="challenge" aria-labelledby="challenge-title">
+        <div class="section-marker reveal" data-reveal><span>01</span><p>The challenge</p></div>
+        <div class="competition-heading">
+          <div>
+            <p class="eyebrow reveal" data-reveal>Autonomy at racing speed</p>
+            <h2 id="challenge-title" class="reveal" data-reveal data-delay="80">Perceive. Decide. <span>Move.</span></h2>
+          </div>
+          <p class="reveal" data-reveal data-delay="140">
+            The NXP Cup asks students to build and race intelligent mobile
+            systems. On the track, the vehicle has to interpret the lane,
+            estimate the right steering response, and adapt its speed without
+            human input.
+          </p>
+        </div>
+
+        <div class="challenge-layout">
+          <article class="challenge-copy reveal" data-reveal>
+            <p><strong>Every frame is a deadline.</strong> The system must extract useful visual information, reject noise, calculate a stable path, and command the vehicle quickly enough to stay precise through every curve.</p>
+            <div class="challenge-meta" aria-label="NXP Cup project priorities">
+              <div><span>Input</span><strong>Live camera frames</strong></div>
+              <div><span>Decision</span><strong>Lane and trajectory estimate</strong></div>
+              <div><span>Output</span><strong>Steering and speed control</strong></div>
+            </div>
+          </article>
+          <div class="challenge-stage reveal" data-reveal data-delay="100">
+            <span class="stage-label">Live racing-line simulation</span>
+            <canvas data-simulation="nxp" aria-hidden="true"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="competition-section section-shell" id="system" aria-labelledby="system-title">
+        <div class="section-marker reveal" data-reveal><span>02</span><p>The system</p></div>
+        <div class="competition-heading">
+          <div>
+            <p class="eyebrow reveal" data-reveal>From photons to motion</p>
+            <h2 id="system-title" class="reveal" data-reveal data-delay="80">A full pipeline. <span>In real time.</span></h2>
+          </div>
+          <p class="reveal" data-reveal data-delay="140">Speed is only useful when the full perception-and-control loop remains stable. Each layer has to be efficient, measurable, and tuned with the others.</p>
+        </div>
+
+        <div class="module-grid">
+          <article class="module-card reveal" data-reveal><div class="module-index"><span>PIPELINE / 01</span><i></i></div><h3>Capture</h3><p>Acquire consistent frames from the camera while the vehicle moves through changing track conditions.</p></article>
+          <article class="module-card reveal" data-reveal data-delay="70"><div class="module-index"><span>PIPELINE / 02</span><i></i></div><h3>Perception</h3><p>Extract lane information with a computer-vision pipeline designed for accuracy and low latency.</p></article>
+          <article class="module-card reveal" data-reveal data-delay="140"><div class="module-index"><span>PIPELINE / 03</span><i></i></div><h3>Control</h3><p>Convert the estimated path into smooth steering and speed commands that remain stable through curves.</p></article>
+          <article class="module-card reveal" data-reveal data-delay="210"><div class="module-index"><span>PIPELINE / 04</span><i></i></div><h3>Optimization</h3><p>Measure the entire loop, remove bottlenecks, and tune for the fastest reliable lap—not a single lucky run.</p></article>
+        </div>
+      </section>
+
+      <section class="process section-shell" aria-labelledby="process-title">
+        <div class="competition-heading">
+          <div><p class="eyebrow reveal" data-reveal>Engineering the racing line</p><h2 id="process-title" class="reveal" data-reveal data-delay="80">Measure. Tune. <span>Repeat.</span></h2></div>
+        </div>
+        <div class="process-list">
+          <article class="process-step reveal" data-reveal><span>01 / MODEL</span><h3>Understand the track</h3><p>Define what the camera should detect and how uncertainty enters the image.</p></article>
+          <article class="process-step reveal" data-reveal data-delay="60"><span>02 / BUILD</span><h3>Connect the loop</h3><p>Integrate vision, processing, steering, propulsion, and system diagnostics.</p></article>
+          <article class="process-step reveal" data-reveal data-delay="120"><span>03 / TUNE</span><h3>Balance the car</h3><p>Adjust perception and control together for stability before chasing speed.</p></article>
+          <article class="process-step reveal" data-reveal data-delay="180"><span>04 / RACE</span><h3>Trust the system</h3><p>Validate repeatedly until fast autonomous behavior holds under pressure.</p></article>
+        </div>
+      </section>
+
+      <section class="competition-gallery" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-shell">
+          <div class="section-marker reveal" data-reveal><span>03</span><p>Competition archive</p></div>
+          <div class="competition-heading">
+            <div><p class="eyebrow reveal" data-reveal>From track to podium</p><h2 id="gallery-title" class="reveal" data-reveal data-delay="80">Precision shared. <span>Progress remembered.</span></h2></div>
+            <p class="reveal" data-reveal data-delay="140">The vehicle is the visible result. Behind it are the test laps, code reviews, late adjustments, and the team learning to make every millisecond count.</p>
+          </div>
+          <div class="gallery-grid" data-gallery-grid>
+            <button class="gallery-frame reveal" type="button" data-reveal data-gallery-image="./comps/NXP%20Cup/team%201st%20place%20nxp%20cup.jpg" data-gallery-alt="AeRobotiX NXP Cup first-place team" data-gallery-tag="Team / First"><img src="./comps/NXP%20Cup/team%201st%20place%20nxp%20cup.jpg" alt="AeRobotiX NXP Cup first-place team" width="2048" height="1932" loading="lazy" /><span>Team / First <i>↗</i></span></button>
+            <button class="gallery-frame reveal" type="button" data-reveal data-delay="60" data-gallery-image="./comps/NXP%20Cup/1st%20place%20at%20the%20international%20stage%20of%20the%20NXP%20Cup.jpg" data-gallery-alt="First place at an international stage of the NXP Cup" data-gallery-tag="International / First"><img src="./comps/NXP%20Cup/1st%20place%20at%20the%20international%20stage%20of%20the%20NXP%20Cup.jpg" alt="First place at an international stage of the NXP Cup" width="1170" height="1557" loading="lazy" /><span>International / First <i>↗</i></span></button>
+            <button class="gallery-frame reveal" type="button" data-reveal data-gallery-image="./comps/NXP%20Cup/1st%20place%20nxp%20cup%20%282%29.jpg" data-gallery-alt="NXP Cup first-place podium moment" data-gallery-tag="Podium / First"><img src="./comps/NXP%20Cup/1st%20place%20nxp%20cup%20%282%29.jpg" alt="NXP Cup first-place podium moment" width="1602" height="2048" loading="lazy" /><span>Podium / First <i>↗</i></span></button>
+            <button class="gallery-frame reveal" type="button" data-reveal data-delay="60" data-gallery-image="./comps/NXP%20Cup/team%202nd%20place%20nxp%20cup.jpg" data-gallery-alt="AeRobotiX NXP Cup second-place team" data-gallery-tag="Team / Second"><img src="./comps/NXP%20Cup/team%202nd%20place%20nxp%20cup.jpg" alt="AeRobotiX NXP Cup second-place team" width="2048" height="2048" loading="lazy" /><span>Team / Second <i>↗</i></span></button>
+            <button class="gallery-frame reveal" type="button" data-reveal data-gallery-image="./comps/NXP%20Cup/2nd%20place%20international%20stage%20of%20the%20NXP%20Cup.jpg" data-gallery-alt="Second place at an international stage of the NXP Cup" data-gallery-tag="International / Second"><img src="./comps/NXP%20Cup/2nd%20place%20international%20stage%20of%20the%20NXP%20Cup.jpg" alt="Second place at an international stage of the NXP Cup" width="1536" height="2048" loading="lazy" /><span>International / Second <i>↗</i></span></button>
+            <button class="gallery-frame reveal" type="button" data-reveal data-delay="60" data-gallery-image="./comps/NXP%20Cup/team%202nd%20place%20nxp%20cup%20%282%29.jpg" data-gallery-alt="AeRobotiX NXP Cup team celebrating together" data-gallery-tag="People / Progress"><img src="./comps/NXP%20Cup/team%202nd%20place%20nxp%20cup%20%282%29.jpg" alt="AeRobotiX NXP Cup team celebrating together" width="2048" height="2048" loading="lazy" /><span>People / Progress <i>↗</i></span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="next-arena" aria-labelledby="next-title">
+        <div class="next-arena-copy reveal" data-reveal>
+          <p class="eyebrow">Next international arena</p>
+          <h2 id="next-title">Now enter the arena.</h2>
+          <p>Discover the self-built autonomous robot that turns a changing game into mechanisms, strategy, and decisive action.</p>
+          <a class="button button-primary magnetic" href="./eurobot.html">Explore Eurobot <span class="button-arrow" aria-hidden="true">↗</span></a>
+        </div>
+        <div class="next-arena-media"><img src="./comps/Eurobot/game%20round%20finale.png" alt="AeRobotiX Eurobot match" width="3024" height="1964" loading="lazy" /></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand"><img src="./logo-removebg-preview.png" alt="AeRobotiX INSAT" /><p>Engineering bold ideas at INSAT.</p></div>
+        <nav aria-label="Footer navigation">
+          <div><p>Explore</p><a href="./index.html">Home</a><a href="#challenge">Challenge</a><a href="#system">System</a></div>
+          <div><p>Compete</p><a href="./eurobot.html">Eurobot</a><a href="./nxp.html">NXP Cup</a><a href="mailto:aerobotix@insat.ucar.tn">Email us</a></div>
+        </nav>
+        <div class="footer-socials" aria-label="Social media"><a href="https://www.facebook.com/AeRobotiX.INSAT" target="_blank" rel="noreferrer" aria-label="AeRobotiX on Facebook">FB</a><a href="https://github.com/Aerobotix-INSAT" target="_blank" rel="noreferrer" aria-label="AeRobotiX on GitHub">GH</a><a href="https://www.linkedin.com/company/aerobotix-insat/" target="_blank" rel="noreferrer" aria-label="AeRobotiX on LinkedIn">IN</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-current-year></span> AeRobotiX INSAT</span><span>NXP Cup program.</span><span class="creator-credit">Created by Amine Bensaid</span><button type="button" data-back-to-top>Back to top ↑</button></div>
+    </footer>
+
+    <dialog class="archive-dialog" data-archive-dialog aria-labelledby="archive-dialog-title">
+      <div class="archive-dialog-bar"><div><span class="signal-dot"></span><p id="archive-dialog-title" data-archive-dialog-title>NXP Cup archive</p></div><button type="button" data-close-archive aria-label="Close image viewer">Close ×</button></div>
+      <div class="archive-dialog-content"><img data-archive-dialog-image alt="" /><p data-archive-dialog-caption></p></div>
+    </dialog>
+
+    <noscript><div class="noscript-note">JavaScript is disabled. All NXP Cup information and images remain available; live simulations and image enlargement require JavaScript.</div></noscript>
+  </body>
+</html>

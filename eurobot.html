@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Discover AeRobotiX INSAT's Eurobot program: autonomous robotics, arena strategy, embedded systems, mechanical design, and an international competition journey."
+    />
+    <meta name="theme-color" content="#06080d" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aerobotix.tn/eurobot" />
+    <meta property="og:title" content="Eurobot — AeRobotiX INSAT" />
+    <meta property="og:description" content="A self-built autonomous robot. A changing arena. One team engineering every move." />
+    <meta property="og:image" content="https://aerobotix.tn/comps/Eurobot/game%20round%20finale.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Eurobot — AeRobotiX INSAT</title>
+    <link rel="canonical" href="https://aerobotix.tn/eurobot" />
+    <link rel="icon" href="./logo-removebg-preview.png" type="image/png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./competition.css" />
+    <script src="./app.js" defer></script>
+    <script src="./competition.js" defer></script>
+  </head>
+  <body class="competition-page eurobot-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+    <div class="page-noise" aria-hidden="true"></div>
+    <div class="pointer-aura" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand competition-brand" href="./index.html" aria-label="AeRobotiX home">
+        <img src="./logo-removebg-preview.png" alt="" />
+      </a>
+      <nav class="desktop-nav" aria-label="Eurobot page navigation">
+        <a href="./index.html">Home</a>
+        <a href="#challenge">Challenge</a>
+        <a href="#system">System</a>
+        <a href="#gallery">Gallery</a>
+        <a href="./nxp.html">NXP Cup</a>
+      </nav>
+      <a class="header-platform magnetic" href="./partners.html#partner-contact">
+        Partner with us <span aria-hidden="true">↗</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav aria-label="Mobile navigation">
+        <a href="./index.html"><span>00</span> Home</a>
+        <a href="#challenge"><span>01</span> Challenge</a>
+        <a href="#system"><span>02</span> System</a>
+        <a href="#gallery"><span>03</span> Gallery</a>
+        <a href="./nxp.html"><span>04</span> NXP Cup</a>
+      </nav>
+      <div class="mobile-menu-meta">
+        <a href="mailto:aerobotix@insat.ucar.tn">aerobotix@insat.ucar.tn</a>
+        <p>INSAT · Tunis, Tunisia</p>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <section class="competition-hero" id="top" aria-labelledby="page-title">
+        <div class="competition-hero-copy">
+          <a class="competition-back" href="./index.html#competitions"><span aria-hidden="true">←</span> International arenas</a>
+          <p class="competition-kicker reveal" data-reveal>Eurobot · Autonomous robotics</p>
+          <h1 id="page-title" class="reveal" data-reveal data-delay="80">
+            Built for <span>the arena.</span>
+          </h1>
+          <p class="competition-hero-lead reveal" data-reveal data-delay="150">
+            A changing challenge, a completely self-built robot, and one team
+            turning mechanical precision, embedded intelligence, and strategy
+            into autonomous action.
+          </p>
+          <div class="competition-actions reveal" data-reveal data-delay="220">
+            <a class="button button-primary magnetic" href="#gallery">Explore the journey <span class="button-arrow" aria-hidden="true">↘</span></a>
+            <a class="button button-ghost magnetic" href="https://www.eurobot.org/eurobot-contest/" target="_blank" rel="noreferrer">Official competition <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="competition-facts reveal" data-reveal data-delay="280" aria-label="Eurobot characteristics">
+            <div><strong>5th worldwide</strong><span>World finals · 2022</span></div>
+            <div><strong>5th worldwide</strong><span>World finals · 2026</span></div>
+            <div><strong>1st place</strong><span>National qualifications</span></div>
+          </div>
+        </div>
+
+        <div class="competition-visual reveal" data-reveal data-delay="120">
+          <div class="visual-shell" data-tilt>
+            <img
+              src="./comps/Eurobot/equipe.jpeg"
+              alt="AeRobotiX Eurobot team"
+              width="1280"
+              height="960"
+              fetchpriority="high"
+            />
+            <canvas class="competition-simulation" data-simulation="eurobot" aria-hidden="true"></canvas>
+            <div class="visual-hud" aria-hidden="true"><span><i></i> Robot online</span></div>
+            <div class="visual-title"><strong>Eurobot</strong><span>Strategy · Autonomy · Precision</span></div>
+          </div>
+          <div class="visual-orbit" aria-hidden="true"><i></i></div>
+        </div>
+      </section>
+
+      <div class="competition-ticker" aria-label="Eurobot engineering disciplines">
+        <div class="competition-ticker-track">
+          <span>Strategy</span><i></i><span>Mechanical design</span><i></i><span>Embedded systems</span><i></i><span>Autonomy</span><i></i><span>Testing</span><i></i><span>Teamwork</span><i></i>
+          <span aria-hidden="true">Strategy</span><i aria-hidden="true"></i><span aria-hidden="true">Mechanical design</span><i aria-hidden="true"></i><span aria-hidden="true">Embedded systems</span><i aria-hidden="true"></i><span aria-hidden="true">Autonomy</span><i aria-hidden="true"></i><span aria-hidden="true">Testing</span><i aria-hidden="true"></i><span aria-hidden="true">Teamwork</span><i aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <section class="competition-section section-shell" id="challenge" aria-labelledby="challenge-title">
+        <div class="section-marker reveal" data-reveal><span>01</span><p>The challenge</p></div>
+        <div class="competition-heading">
+          <div>
+            <p class="eyebrow reveal" data-reveal>A new game every season</p>
+            <h2 id="challenge-title" class="reveal" data-reveal data-delay="80">Read the field. <span>Own the match.</span></h2>
+          </div>
+          <p class="reveal" data-reveal data-delay="140">
+            Eurobot introduces an original theme and actions every year. The
+            robot must understand the arena through sensors, execute a strategy
+            without human control, and remain dependable when the match begins.
+          </p>
+        </div>
+
+        <div class="challenge-layout">
+          <article class="challenge-copy reveal" data-reveal>
+            <p><strong>The real opponent is uncertainty.</strong> A strong design has to survive imperfect positioning, physical contact, timing pressure, and the difference between a clean workshop test and a live arena.</p>
+            <div class="challenge-meta" aria-label="Eurobot project priorities">
+              <div><span>Mission</span><strong>Score through autonomous actions</strong></div>
+              <div><span>Environment</span><strong>Shared competition table</strong></div>
+              <div><span>Focus</span><strong>Reliable, repeatable behavior</strong></div>
+            </div>
+          </article>
+          <div class="challenge-stage reveal" data-reveal data-delay="100">
+            <span class="stage-label">Eurobot in action</span>
+            <video controls playsinline preload="metadata" aria-label="AeRobotiX competing at Eurobot">
+              <source src="./videos/eurobot.mp4" type="video/mp4" />
+              Your browser does not support embedded video. <a href="./videos/eurobot.mp4">Download the Eurobot video</a>.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section class="competition-section section-shell" id="system" aria-labelledby="system-title">
+        <div class="section-marker reveal" data-reveal><span>02</span><p>The system</p></div>
+        <div class="competition-heading">
+          <div>
+            <p class="eyebrow reveal" data-reveal>One robot, many disciplines</p>
+            <h2 id="system-title" class="reveal" data-reveal data-delay="80">Every subsystem. <span>One purpose.</span></h2>
+          </div>
+          <p class="reveal" data-reveal data-delay="140">Competition performance comes from integration: the mechanism, electronics, code, and match strategy must behave as one coherent machine.</p>
+        </div>
+
+        <div class="module-grid">
+          <article class="module-card reveal" data-reveal><div class="module-index"><span>MODULE / 01</span><i></i></div><h3>Mechanics</h3><p>Designing compact, robust mechanisms that execute the season's actions accurately and repeatedly.</p></article>
+          <article class="module-card reveal" data-reveal data-delay="70"><div class="module-index"><span>MODULE / 02</span><i></i></div><h3>Embedded</h3><p>Connecting actuators, sensors, power, and real-time control into a dependable electrical architecture.</p></article>
+          <article class="module-card reveal" data-reveal data-delay="140"><div class="module-index"><span>MODULE / 03</span><i></i></div><h3>Autonomy</h3><p>Localizing, planning, and adapting so the robot can make every decision after the start signal.</p></article>
+          <article class="module-card reveal" data-reveal data-delay="210"><div class="module-index"><span>MODULE / 04</span><i></i></div><h3>Strategy</h3><p>Turning game rules into prioritized actions, safe paths, timing decisions, and resilient match plans.</p></article>
+        </div>
+      </section>
+
+      <section class="process section-shell" aria-labelledby="process-title">
+        <div class="competition-heading">
+          <div><p class="eyebrow reveal" data-reveal>How the robot becomes real</p><h2 id="process-title" class="reveal" data-reveal data-delay="80">Build. Break. <span>Improve.</span></h2></div>
+        </div>
+        <div class="process-list">
+          <article class="process-step reveal" data-reveal><span>01 / DEFINE</span><h3>Decode the game</h3><p>Transform rules and scoring opportunities into engineering requirements.</p></article>
+          <article class="process-step reveal" data-reveal data-delay="60"><span>02 / PROTOTYPE</span><h3>Prove the idea</h3><p>Build fast, test mechanisms early, and make the difficult parts tangible.</p></article>
+          <article class="process-step reveal" data-reveal data-delay="120"><span>03 / INTEGRATE</span><h3>Make it one system</h3><p>Bring hardware and software together with clear interfaces and diagnostics.</p></article>
+          <article class="process-step reveal" data-reveal data-delay="180"><span>04 / VALIDATE</span><h3>Repeat under pressure</h3><p>Run full matches until reliable performance becomes the default.</p></article>
+        </div>
+      </section>
+
+      <section class="competition-gallery" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-shell">
+          <div class="section-marker reveal" data-reveal><span>03</span><p>Competition archive</p></div>
+          <div class="competition-heading">
+            <div><p class="eyebrow reveal" data-reveal>Inside the arena</p><h2 id="gallery-title" class="reveal" data-reveal data-delay="80">The work. <span>The team. The moment.</span></h2></div>
+            <p class="reveal" data-reveal data-delay="140">From national qualification to the international stage, every frame carries the people, iterations, and pressure behind the robot.</p>
+          </div>
+          <div class="gallery-grid" data-gallery-grid>
+            <button class="gallery-frame reveal" type="button" data-reveal data-gallery-image="./comps/Eurobot/game%20round%20finale.png" data-gallery-alt="Eurobot final game round" data-gallery-tag="Arena / Final"><img src="./comps/Eurobot/game%20round%20finale.png" alt="Eurobot final game round" width="3024" height="1964" loading="lazy" /><span>Arena / Final <i>↗</i></span></button>
+            <button class="gallery-frame reveal" type="button" data-reveal data-delay="60" data-gallery-image="./comps/Eurobot/eurobot%202026.jpg" data-gallery-alt="Eurobot 2026 international finals" data-gallery-tag="Finals / 2026"><img src="./comps/Eurobot/eurobot%202026.jpg" alt="Eurobot 2026 international finals" width="1536" height="2048" loading="lazy" /><span>Finals / 2026 <i>↗</i></span></button>
+            <button class="gallery-frame reveal" type="button" data-reveal data-gallery-image="./comps/Eurobot/1st%20place%20in%20the%20national%20qualifications%20Eurobot.jpg" data-gallery-alt="First place in the Eurobot national qualifications" data-gallery-tag="National / First"><img src="./comps/Eurobot/1st%20place%20in%20the%20national%20qualifications%20Eurobot.jpg" alt="First place in the Eurobot national qualifications" width="2048" height="1366" loading="lazy" /><span>National / First <i>↗</i></span></button>
+            <button class="gallery-frame reveal" type="button" data-reveal data-delay="60" data-gallery-image="./comps/Eurobot/game%20round%20.jpeg" data-gallery-alt="AeRobotiX robot during a Eurobot match" data-gallery-tag="Arena / Match"><img src="./comps/Eurobot/game%20round%20.jpeg" alt="AeRobotiX robot during a Eurobot match" width="1152" height="1536" loading="lazy" /><span>Arena / Match <i>↗</i></span></button>
+            <button class="gallery-frame reveal" type="button" data-reveal data-gallery-image="./comps/Eurobot/the%20national%20qualifications%20eurobot%20taswira%20jame3eya.jpg" data-gallery-alt="Eurobot national qualification team" data-gallery-tag="Team / Qualifications"><img src="./comps/Eurobot/the%20national%20qualifications%20eurobot%20taswira%20jame3eya.jpg" alt="Eurobot national qualification team" width="2048" height="1366" loading="lazy" /><span>Team / Qualifications <i>↗</i></span></button>
+            <button class="gallery-frame reveal" type="button" data-reveal data-delay="60" data-gallery-image="./comps/Eurobot/euroo.jpg" data-gallery-alt="AeRobotiX at the Eurobot international finals" data-gallery-tag="International / Finals"><img src="./comps/Eurobot/euroo.jpg" alt="AeRobotiX at the Eurobot international finals" width="940" height="705" loading="lazy" /><span>International / Finals <i>↗</i></span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="next-arena" aria-labelledby="next-title">
+        <div class="next-arena-copy reveal" data-reveal>
+          <p class="eyebrow">Next international arena</p>
+          <h2 id="next-title">Now follow the line.</h2>
+          <p>Meet the autonomous vehicle that turns camera frames into fast, precise steering decisions.</p>
+          <a class="button button-primary magnetic" href="./nxp.html">Explore NXP Cup <span class="button-arrow" aria-hidden="true">↗</span></a>
+        </div>
+        <div class="next-arena-media"><img src="./comps/NXP%20Cup/team%201st%20place%20nxp%20cup.jpg" alt="AeRobotiX NXP Cup team" width="2048" height="1932" loading="lazy" /></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand"><img src="./logo-removebg-preview.png" alt="AeRobotiX INSAT" /><p>Engineering bold ideas at INSAT.</p></div>
+        <nav aria-label="Footer navigation">
+          <div><p>Explore</p><a href="./index.html">Home</a><a href="#challenge">Challenge</a><a href="#system">System</a></div>
+          <div><p>Compete</p><a href="./eurobot.html">Eurobot</a><a href="./nxp.html">NXP Cup</a><a href="mailto:aerobotix@insat.ucar.tn">Email us</a></div>
+        </nav>
+        <div class="footer-socials" aria-label="Social media"><a href="https://www.facebook.com/AeRobotiX.INSAT" target="_blank" rel="noreferrer" aria-label="AeRobotiX on Facebook">FB</a><a href="https://github.com/Aerobotix-INSAT" target="_blank" rel="noreferrer" aria-label="AeRobotiX on GitHub">GH</a><a href="https://www.linkedin.com/company/aerobotix-insat/" target="_blank" rel="noreferrer" aria-label="AeRobotiX on LinkedIn">IN</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-current-year></span> AeRobotiX INSAT</span><span>Eurobot program.</span><span class="creator-credit">Created by Amine Bensaid</span><button type="button" data-back-to-top>Back to top ↑</button></div>
+    </footer>
+
+    <dialog class="archive-dialog" data-archive-dialog aria-labelledby="archive-dialog-title">
+      <div class="archive-dialog-bar"><div><span class="signal-dot"></span><p id="archive-dialog-title" data-archive-dialog-title>Eurobot archive</p></div><button type="button" data-close-archive aria-label="Close image viewer">Close ×</button></div>
+      <div class="archive-dialog-content"><img data-archive-dialog-image alt="" /><p data-archive-dialog-caption></p></div>
+    </dialog>
+
+    <noscript><div class="noscript-note">JavaScript is disabled. All Eurobot information and the competition video remain available; animated overlays and image enlargement require JavaScript.</div></noscript>
+  </body>
+</html>

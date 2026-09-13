@@ -1,16 +1,667 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <link href="/favicon.ico" rel="icon" type="image/svg+xml"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta  name="description" content="Unleash your passion for robotics and aeronautics with Aerobotix INSAT! Explore our club's projects, workshops, and competitions. Join us and build the future!"/>
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
-    <meta name="google-site-verification" content="LbWZJNF_VWoysHjth7AwBagJQ4dufWf0JUJe2G8MLPY" />
-    <title>Aerobotix INSAT</title>
-</head>
-<body>
-<div id="root"></div>
-<script src="/src/main.jsx" type="module"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="AeRobotiX INSAT is a student science club building ambitious robotics, automation, and aeronautics projects while competing nationally and internationally."
+    />
+    <meta name="theme-color" content="#06080d" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aerobotix.tn/" />
+    <meta property="og:title" content="AeRobotiX INSAT — Learn. Create. Innovate." />
+    <meta
+      property="og:description"
+      content="Discover the people, technical axes, competitions, and signature events of AeRobotiX INSAT."
+    />
+    <meta
+      property="og:image"
+      content="https://aerobotix.tn/logo.jpeg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>AeRobotiX INSAT — Learn. Create. Innovate.</title>
+    <link rel="canonical" href="https://aerobotix.tn/" />
+    <link rel="icon" href="./logo-removebg-preview.png" type="image/png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://res.cloudinary.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AeRobotiX INSAT",
+        "url": "https://aerobotix.tn/",
+        "email": "aerobotix@insat.ucar.tn",
+        "sameAs": [
+          "https://www.facebook.com/AeRobotiX.INSAT",
+          "https://github.com/Aerobotix-INSAT",
+          "https://www.linkedin.com/company/aerobotix-insat/"
+        ]
+      }
+    </script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+    <div class="page-noise" aria-hidden="true"></div>
+    <div class="pointer-aura" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="AeRobotiX home">
+        <img src="./logo-removebg-preview.png" alt="AeRobotiX INSAT" />
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#axes">Our axes</a>
+        <a href="./eurobot.html">Eurobot</a>
+        <a href="./nxp.html">NXP Cup</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#events">Events</a>
+        <a href="./partners.html">Partners</a>
+      </nav>
+
+      <div class="header-actions">
+        <a
+          class="header-platform"
+          href="./join.html"
+        >
+          Join us <span aria-hidden="true">↗</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav aria-label="Mobile navigation">
+        <a href="#about"><span>01</span> About</a>
+        <a href="#axes"><span>02</span> Our axes</a>
+        <a href="./eurobot.html"><span>03</span> Eurobot</a>
+        <a href="./nxp.html"><span>04</span> NXP Cup</a>
+        <a href="#achievements"><span>05</span> Achievements</a>
+        <a href="#events"><span>06</span> Events</a>
+        <a href="#team"><span>07</span> Team</a>
+        <a href="./join.html"><span>08</span> Join us</a>
+        <a href="./partners.html"><span>09</span> Partners</a>
+      </nav>
+      <div class="mobile-menu-meta">
+        <a href="mailto:aerobotix@insat.ucar.tn">aerobotix@insat.ucar.tn</a>
+        <p>INSAT · Tunis, Tunisia</p>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-red" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-blue" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <p class="eyebrow reveal" data-reveal>
+            <span class="signal-dot"></span>
+            INSAT · Robotics &amp; Aeronautics
+          </p>
+          <h1 id="hero-title" class="reveal" data-reveal data-delay="80">
+            We don't predict
+            <span>the future.</span>
+            <strong>We build it.</strong>
+          </h1>
+          <p class="hero-lead reveal" data-reveal data-delay="160">
+            A student-powered engineering club where ambitious ideas become
+            robots, automated systems, aircraft concepts, and competition-ready
+            machines.
+          </p>
+          <div class="hero-actions reveal" data-reveal data-delay="240">
+            <a class="button button-primary magnetic" href="#competitions">
+              Explore the arenas
+              <span class="button-arrow" aria-hidden="true">↘</span>
+            </a>
+            <button class="button button-ghost magnetic" type="button" data-open-reel>
+              <span class="play-icon" aria-hidden="true">▶</span>
+              Watch our reel
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-reveal data-delay="120">
+          <div class="hero-image-frame" data-tilt>
+            <img
+              src="https://res.cloudinary.com/dbdfckq5e/image/upload/f_auto,q_auto,w_1200/eurobot"
+              alt="AeRobotiX Eurobot robot and team project"
+              fetchpriority="high"
+            />
+            <div class="hero-image-scan" aria-hidden="true"></div>
+            <div class="image-corner corner-tl" aria-hidden="true"></div>
+            <div class="image-corner corner-br" aria-hidden="true"></div>
+          </div>
+          <div class="hero-orbit" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="visual-caption">
+            <span>Engineering without limits</span>
+            <span>36.8321° N · 10.2324° E</span>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#about" aria-label="Scroll to introduction">
+          <span>Scroll to explore</span>
+          <i aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <div class="kinetic-rail" aria-label="Club disciplines">
+        <div class="kinetic-track">
+          <span>Robotics</span><i></i><span>Aeronautics</span><i></i
+          ><span>Automation</span><i></i><span>Embedded Systems</span><i></i
+          ><span>Mechanical Design</span><i></i><span>Innovation</span><i></i
+          ><span aria-hidden="true">Robotics</span><i aria-hidden="true"></i
+          ><span aria-hidden="true">Aeronautics</span><i aria-hidden="true"></i
+          ><span aria-hidden="true">Automation</span><i aria-hidden="true"></i
+          ><span aria-hidden="true">Embedded Systems</span><i aria-hidden="true"></i
+          ><span aria-hidden="true">Mechanical Design</span><i aria-hidden="true"></i
+          ><span aria-hidden="true">Innovation</span><i aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <section class="intro section-shell" id="about" aria-labelledby="about-title">
+        <div class="section-marker reveal" data-reveal>
+          <span>01</span>
+          <p>Who we are</p>
+        </div>
+
+        <div class="intro-layout">
+          <div class="intro-heading">
+            <p class="eyebrow reveal" data-reveal>A little introduction</p>
+            <h2 id="about-title" class="reveal" data-reveal data-delay="80">
+              Curiosity becomes
+              <span class="outline-text">capability.</span>
+            </h2>
+          </div>
+          <div class="intro-copy reveal" data-reveal data-delay="120">
+            <p class="intro-dropcap">
+              The AeRobotiX club is a non-profit science club, born from the
+              merger of INSAT's Mechatronics and CCE clubs.
+            </p>
+            <p>
+              AeRobotiX develops robotic and automated applications with value
+              across robotics, home automation, aeronautics, automotive, and
+              security. Its history is shaped by regular participation in
+              national and international competitions.
+            </p>
+            <p>
+              Members receive strong technical training and an exceptional
+              managerial experience. Through real projects, team collaboration,
+              and contact with professionals, they turn academic knowledge into
+              practical engineering skills.
+            </p>
+          </div>
+        </div>
+
+        <div class="intro-facts">
+          <article class="fact-card reveal" data-reveal>
+            <strong data-count="2">02</strong>
+            <span>Core axes</span>
+            <p>Robotics and aeronautics, connected by real engineering.</p>
+          </article>
+          <article class="fact-card reveal" data-reveal data-delay="80">
+            <strong>INSAT</strong>
+            <span>Our home</span>
+            <p>A multidisciplinary engineering environment in Tunis.</p>
+          </article>
+          <article class="fact-card fact-card-accent reveal" data-reveal data-delay="160">
+            <strong>∞</strong>
+            <span>Room to create</span>
+            <p>Learn, prototype, test, compete, and improve together.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="axes section-shell" id="axes" aria-labelledby="axes-title">
+        <div class="section-marker reveal" data-reveal>
+          <span>02</span>
+          <p>What moves us</p>
+        </div>
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow reveal" data-reveal>Our axes</p>
+            <h2 id="axes-title" class="reveal" data-reveal data-delay="80">
+              Two disciplines.
+              <span>One mindset.</span>
+            </h2>
+          </div>
+          <p class="section-intro reveal" data-reveal data-delay="120">
+            Mechanical thinking, electronics, software, and bold experimentation
+            meet in every AeRobotiX challenge.
+          </p>
+        </div>
+
+        <div class="axis-stack">
+          <article class="axis-panel axis-robotics" data-axis-card>
+            <div class="axis-number" aria-hidden="true">01</div>
+            <div class="axis-media">
+              <img
+                src="https://res.cloudinary.com/dbdfckq5e/image/upload/f_auto,q_auto,w_1400/robotics"
+                alt="Robotics work at AeRobotiX"
+                loading="lazy"
+              />
+            </div>
+            <div class="axis-content">
+              <p class="eyebrow">Design · Build · Program</p>
+              <h3>Robotics</h3>
+              <p>
+                An interdisciplinary practice combining mechanical engineering,
+                electronics, information engineering, and computer science to
+                design, construct, operate, and control intelligent machines.
+              </p>
+              <div class="tag-list" aria-label="Robotics disciplines">
+                <span>Mechanics</span><span>Electronics</span><span>Control</span
+                ><span>Software</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="axis-panel axis-aeronautics" data-axis-card>
+            <div class="axis-number" aria-hidden="true">02</div>
+            <div class="axis-media">
+              <img
+                src="https://res.cloudinary.com/dbdfckq5e/image/upload/f_auto,q_auto,w_1400/aeronautics"
+                alt="Aeronautics work at AeRobotiX"
+                loading="lazy"
+              />
+            </div>
+            <div class="axis-content">
+              <p class="eyebrow">Imagine · Engineer · Fly</p>
+              <h3>Aeronautics</h3>
+              <p>
+                The art and science of studying, designing, manufacturing, and
+                operating flight-capable machines, aircraft, and rockets within
+                the atmosphere.
+              </p>
+              <div class="tag-list" aria-label="Aeronautics disciplines">
+                <span>CAD</span><span>Flight</span><span>Structures</span
+                ><span>Innovation</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="memories" id="memories" aria-labelledby="memories-title">
+        <div class="section-shell memories-heading">
+          <div class="section-marker reveal" data-reveal>
+            <span>03</span>
+            <p>Inside the journey</p>
+          </div>
+          <div class="section-heading-row">
+            <div>
+              <p class="eyebrow reveal" data-reveal>Precious memories</p>
+              <h2 id="memories-title" class="reveal" data-reveal data-delay="80">
+                Built together.
+                <span>Remembered forever.</span>
+              </h2>
+            </div>
+            <p class="section-intro reveal" data-reveal data-delay="120">
+              The workbench, the late nights, the first test, and the shared
+              moment when an idea finally moves.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-viewport reveal" data-reveal>
+          <div class="gallery-track" data-gallery-track></div>
+        </div>
+      </section>
+
+      <section class="flagships section-shell" id="competitions" aria-labelledby="competitions-title">
+        <div class="section-marker reveal" data-reveal>
+          <span>04</span>
+          <p>International arenas</p>
+        </div>
+
+        <div class="section-heading-row flagships-heading">
+          <div>
+            <p class="eyebrow reveal" data-reveal>Our flagship competitions</p>
+            <h2 id="competitions-title" class="reveal" data-reveal data-delay="80">
+              Two arenas.
+              <span>One engineering culture.</span>
+            </h2>
+          </div>
+          <p class="section-intro reveal" data-reveal data-delay="120">
+            The club's most demanding international programs turn months of
+            design, code, testing, and teamwork into a few decisive minutes.
+          </p>
+        </div>
+
+        <div class="flagship-grid">
+          <a class="flagship-card flagship-eurobot reveal" href="./eurobot.html" data-reveal data-tilt>
+            <div class="flagship-media">
+              <img
+                src="./comps/Eurobot/equipe.jpeg"
+                alt="AeRobotiX Eurobot team"
+                width="3024"
+                height="1964"
+                loading="lazy"
+              />
+              <div class="flagship-scan" aria-hidden="true"></div>
+              <div class="arena-radar" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+            <div class="flagship-content">
+              <div>
+                <p class="eyebrow">Autonomous robotics · International</p>
+                <h3>Eurobot</h3>
+                <p>Strategy becomes motion in a self-built autonomous arena.</p>
+              </div>
+              <span class="flagship-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="flagship-telemetry" aria-hidden="true">
+              <span><i></i> System online</span><span>Autonomy / ready</span>
+            </div>
+          </a>
+
+          <a class="flagship-card flagship-nxp reveal" href="./nxp.html" data-reveal data-delay="100" data-tilt>
+            <div class="flagship-media">
+              <img
+                src="./comps/NXP%20Cup/team%201st%20place%20nxp%20cup.jpg"
+                alt="AeRobotiX NXP Cup autonomous vehicle team"
+                width="2048"
+                height="1932"
+                loading="lazy"
+              />
+              <div class="flagship-road" aria-hidden="true"><i></i></div>
+              <div class="vision-reticle" aria-hidden="true"><i></i></div>
+            </div>
+            <div class="flagship-content">
+              <div>
+                <p class="eyebrow">Computer vision · Autonomous racing</p>
+                <h3>NXP Cup</h3>
+                <p>A lane-following robot that sees, decides, and acts in real time.</p>
+              </div>
+              <span class="flagship-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="flagship-telemetry" aria-hidden="true">
+              <span><i></i> Vision locked</span><span>Control / active</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="achievements section-shell" id="achievements" aria-labelledby="achievements-title">
+        <div class="section-marker reveal" data-reveal>
+          <span>05</span>
+          <p>Competition record</p>
+        </div>
+        <div class="section-heading-row achievements-heading">
+          <div>
+            <p class="eyebrow reveal" data-reveal>Built for the arena</p>
+            <h2 id="achievements-title" class="reveal" data-reveal data-delay="80">
+              Proof of work.
+              <span>Frame by frame.</span>
+            </h2>
+          </div>
+          <p class="section-intro reveal" data-reveal data-delay="120">
+            A living archive of the competitions, podiums, and projects that
+            shaped AeRobotiX. Select a track, then open any frame to follow the
+            story behind it.
+          </p>
+        </div>
+        <div class="results-grid" aria-label="Competition highlights">
+          <a class="result-card result-world reveal" href="./eurobot.html" data-reveal data-tilt>
+            <span class="eyebrow">Eurobot · World finals</span>
+            <strong class="result-rank">5<span>th</span></strong>
+            <h3>On the world stage.</h3>
+            <p>5th place worldwide in both <strong>2022 &amp; 2026</strong>.</p>
+            <span class="result-link">Inside Eurobot <span aria-hidden="true">↗</span></span>
+            <span class="result-orbit" aria-hidden="true"></span>
+          </a>
+          <a class="result-card reveal" href="./nxp.html" data-reveal data-delay="60" data-tilt>
+            <span class="eyebrow">NXP Cup · National qualifications</span>
+            <strong class="result-rank">1<span>st</span><i> + 2nd</i></strong>
+            <h3>Leading the starting grid.</h3>
+            <p><strong>2025 / 1st place</strong><br /><strong>2026 / 1st &amp; 2nd place</strong></p>
+            <span class="result-link">Follow the racing line <span aria-hidden="true">↗</span></span>
+          </a>
+          <article class="result-card result-compact reveal" data-reveal data-delay="120">
+            <span class="eyebrow">ENSI · Autonomous robotics</span>
+            <strong class="result-rank">1<span>st</span></strong>
+            <h3>Autonome ENSI</h3><p>First place in autonomous robotics.</p>
+          </article>
+          <article class="result-card result-compact reveal" data-reveal data-delay="180">
+            <span class="eyebrow">ENSI · Line follower</span>
+            <strong class="result-rank">1<span>st</span></strong>
+            <h3>Line Follower ENSI</h3><p>First across the line.</p>
+          </article>
+          <a class="result-card result-compact reveal" href="./eurobot.html" data-reveal data-delay="240" data-tilt>
+            <span class="eyebrow">Eurobot · National qualifications</span>
+            <strong class="result-rank">1<span>st</span></strong>
+            <h3>Qualified to go further.</h3><p>First place in the national qualifications.</p>
+          </a>
+        </div>
+        <div class="achievement-toolbar reveal" data-reveal data-delay="160">
+          <div class="achievement-filters" data-achievement-filters aria-label="Filter achievements"></div>
+          <p class="achievement-count" data-achievement-count aria-live="polite"></p>
+        </div>
+        <div class="achievement-groups" data-achievement-groups></div>
+      </section>
+
+      <section class="events section-shell" id="events" aria-labelledby="events-title">
+        <div class="section-marker reveal" data-reveal>
+          <span>06</span>
+          <p>Signature events</p>
+        </div>
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow reveal" data-reveal>Events</p>
+            <h2 id="events-title" class="reveal" data-reveal data-delay="80">
+              Challenges that bring
+              <span>people together.</span>
+            </h2>
+          </div>
+          <p class="section-intro reveal" data-reveal data-delay="120">
+            From autonomous robots to the future of flight, our events make
+            technology tangible, competitive, and open to curious minds.
+          </p>
+        </div>
+
+        <div class="event-grid">
+          <article class="event-card reveal" data-reveal data-tilt>
+            <div class="event-image">
+              <img
+                src="https://res.cloudinary.com/dbdfckq5e/image/upload/f_auto,q_auto,w_1400/robolympix"
+                alt="Robolympix robotics event"
+                loading="lazy"
+              />
+              <span class="event-index">EV / 01</span>
+            </div>
+            <div class="event-content">
+              <div>
+                <p class="eyebrow">Robotics · All ages</p>
+                <h3>Robolympix</h3>
+              </div>
+              <p>
+                A global robotics competition that challenges participants in
+                categories including autonomous and remote-controlled robots.
+                Robolympix Junior makes the experience accessible to younger
+                builders too.
+              </p>
+              <a
+                class="event-action"
+                href="https://www.robolympix.tn/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit the Robolympix website"
+              >
+                <span>Discover Robolympix</span><i aria-hidden="true">↗</i>
+              </a>
+            </div>
+          </article>
+
+          <article class="event-card reveal" data-reveal data-delay="100" data-tilt>
+            <div class="event-image">
+              <img
+                src="./memories/aeroday.png"
+                alt="Tunisian Aeroday aeronautics event"
+                loading="lazy"
+              />
+              <span class="event-index">EV / 02</span>
+            </div>
+            <div class="event-content">
+              <div>
+                <p class="event-coming"><span aria-hidden="true"></span> Coming November 2026</p>
+                <h3>Aeroday</h3>
+              </div>
+              <p>
+                Back this November. A multi-faceted aeronautics experience featuring challenges,
+                airshows, aeromodels, CAD, educational exhibitions, aerospace
+                discussions, AeroChallenge, and AeroEntrepreneur. Exact date and registration details coming soon.
+              </p>
+              <a
+                class="event-action"
+                href="https://aeroday.tn"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit the Tunisian Aeroday website"
+              >
+                <span>Discover Aeroday</span><i aria-hidden="true">↗</i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="team section-shell" id="team" aria-labelledby="team-title">
+        <div class="section-marker reveal" data-reveal>
+          <span>07</span>
+          <p>The people behind it</p>
+        </div>
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow reveal" data-reveal>Our team</p>
+            <h2 id="team-title" class="reveal" data-reveal data-delay="80">
+              Different strengths.
+              <span>Shared ambition.</span>
+            </h2>
+          </div>
+          <p class="section-intro reveal" data-reveal data-delay="120">
+            Technical leadership, training, logistics, media, partnerships, and
+            human connection keep every ambitious project moving.
+          </p>
+        </div>
+
+        <div class="team-roster" data-team-grid></div>
+      </section>
+
+      <section class="closing" id="join" aria-labelledby="closing-title">
+        <div class="closing-orbit" aria-hidden="true"></div>
+        <div class="closing-copy reveal" data-reveal>
+          <p class="eyebrow">Everyone is welcome</p>
+          <h2 id="closing-title">Learn.<span>Create.</span>Innovate.</h2>
+          <p>Beginner or experienced builder, from INSAT or elsewhere: your curiosity is enough to start.</p>
+          <a class="button button-primary magnetic" href="./join.html">Join AeRobotiX <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img src="./logo-removebg-preview.png" alt="AeRobotiX INSAT" />
+          <p>Engineering bold ideas at INSAT.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <div>
+            <p>Explore</p>
+            <a href="#about">About</a>
+            <a href="#axes">Our axes</a>
+            <a href="./eurobot.html">Eurobot</a>
+            <a href="./nxp.html">NXP Cup</a>
+            <a href="#achievements">Achievements</a>
+          </div>
+          <div>
+            <p>Connect</p>
+            <a href="#events">Events</a>
+            <a href="#team">Team</a>
+            <a href="mailto:aerobotix@insat.ucar.tn">Email us</a>
+            <a href="./partners.html">Partner with us</a>
+          </div>
+        </nav>
+        <div class="footer-socials" aria-label="Social media">
+          <a
+            href="https://www.facebook.com/AeRobotiX.INSAT"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="AeRobotiX on Facebook"
+          >FB</a>
+          <a
+            href="https://github.com/Aerobotix-INSAT"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="AeRobotiX on GitHub"
+          >GH</a>
+          <a
+            href="https://www.linkedin.com/company/aerobotix-insat/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="AeRobotiX on LinkedIn"
+          >IN</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-current-year></span> AeRobotiX INSAT</span>
+        <span>Shaping the era.</span>
+        <span class="creator-credit">Created by Amine Bensaid</span>
+        <button type="button" data-back-to-top>Back to top ↑</button>
+      </div>
+    </footer>
+
+    <dialog class="reel-dialog" data-reel-dialog aria-labelledby="reel-title">
+      <div class="reel-dialog-bar">
+        <div>
+          <span class="signal-dot"></span>
+          <p id="reel-title">AeRobotiX showreel</p>
+        </div>
+        <button type="button" data-close-reel aria-label="Close video">Close ×</button>
+      </div>
+      <video controls playsinline preload="none" data-reel-video>
+        <p>Your browser cannot play this video.</p>
+      </video>
+    </dialog>
+
+    <dialog class="archive-dialog" data-archive-dialog aria-labelledby="archive-dialog-title">
+      <div class="archive-dialog-bar">
+        <div>
+          <span class="signal-dot"></span>
+          <p id="archive-dialog-title" data-archive-dialog-title>Achievement frame</p>
+        </div>
+        <button type="button" data-close-archive aria-label="Close image viewer">Close ×</button>
+      </div>
+      <div class="archive-dialog-content">
+        <img data-archive-dialog-image alt="" />
+        <p data-archive-dialog-caption></p>
+      </div>
+    </dialog>
+
+    <noscript>
+      <div class="noscript-note">
+        JavaScript is disabled. All club information remains available, but
+        motion, the team grid, and the memories gallery require JavaScript.
+      </div>
+    </noscript>
+  </body>
 </html>
