@@ -18,4 +18,11 @@ create table if not exists public.partnership_inquiries (
 
 alter table public.partnership_inquiries enable row level security;
 revoke all on table public.partnership_inquiries from anon, authenticated;
-grant insert on table public.partnership_inquiries to service_role;
+grant insert on table public.partnership_inquiries to anon;
+
+drop policy if exists "Allow anonymous partnership inquiries" on public.partnership_inquiries;
+create policy "Allow anonymous partnership inquiries"
+  on public.partnership_inquiries
+  for insert
+  to anon
+  with check (true);

@@ -65,9 +65,9 @@ export async function POST(request) {
   }
   if (!allowedInterests.has(values.interest)) return json({ ok: false, error: "Invalid partnership interest" }, 400);
 
-  const supabaseUrl = process.env.SUPABASE_URL?.replace(/\/$/, "");
-  const supabaseSecret = process.env.SUPABASE_SECRET_KEY;
-  if (!supabaseUrl || !supabaseSecret) {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, "");
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!supabaseUrl || !supabaseAnonKey) {
     console.error("Supabase environment variables are not configured");
     return json({ ok: false, error: "Service unavailable" }, 503);
   }
@@ -75,7 +75,8 @@ export async function POST(request) {
   const response = await fetch(`${supabaseUrl}/rest/v1/partnership_inquiries`, {
     method: "POST",
     headers: {
-      apikey: supabaseSecret,
+      apikey: supabaseAnonKey,
+      Authorization: `Bearer ${supabaseAnonKey}`,
       "Content-Type": "application/json",
       Prefer: "return=minimal",
     },

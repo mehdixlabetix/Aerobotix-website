@@ -43,7 +43,7 @@ Use `npx vercel` without `--prod` when you want a preview URL first. Do not comm
 - Eurobot story: `eurobot.html`
 - NXP Cup story: `nxp.html`
 - Standalone joining page and animated robot: `join.html`, `join.css`, `join.js`
-- Partnership page and contact form: `partners.html`, `partners.css`, `partners.js`. The form sends validated requests through the `/api/partnerships` Vercel Function and stores them in the Supabase `partnership_inquiries` table without opening the visitor's email app. Configure `SUPABASE_URL` and `SUPABASE_SECRET_KEY` in Vercel.
+- Partnership page and contact form: `partners.html`, `partners.css`, `partners.js`. The form sends validated requests through the `/api/partnerships` Vercel Function and stores them in the Supabase `partnership_inquiries` table without opening the visitor's email app. Configure `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in Vercel, and apply `supabase/partnership_inquiries.sql` to grant insert-only access to the anonymous role.
 - Team and homepage gallery data: `app.js`
 - Competition interactions and simulations: `competition.js`
 - Eurobot competition video: `videos/eurobot.mp4`
