@@ -29,7 +29,7 @@ const securityHeaders = {
     "font-src https://fonts.gstatic.com",
     "img-src 'self' data: https://res.cloudinary.com",
     "media-src https://res.cloudinary.com",
-    "connect-src 'self' https://firestore.googleapis.com",
+    "connect-src 'self'",
     "object-src 'none'",
     "base-uri 'self'",
     "frame-ancestors 'none'",

@@ -20,9 +20,9 @@ npm run check
 Create the same static artifact used by production with `npm run build`. The
 generated `dist/` directory is intentionally ignored by Git.
 
-The site has no runtime dependencies, authentication, or custom backend. The membership form submits directly to the original joining form's Cloud Firestore project (`aerobotix-b4855`, `members` collection), retaining its field names and string values. The existing Firebase security rules govern these submissions; no administrative credentials are used. Both preview and production CSP allow this specific Firestore host. The included Node server exists only for local preview, supports clean page URLs, and applies a production-style security-header baseline.
+The site has no runtime dependencies or authentication. The membership and partnership forms submit to server-side Vercel Functions, which validate requests before inserting them into Supabase with its public anon key and insert-only Row Level Security policies. The included Node server exists only for local preview, supports clean page URLs, and applies a production-style security-header baseline.
 
-The new form preserves answers on submission failure and only reports success after a confirmed response. Retries of unchanged answers reuse a document ID to avoid duplicate applications. Browser verification should intercept these requests with test responses, rather than insert test members into the live collection. Live delivery still needs verification with a genuine application.
+The forms preserve answers on submission failure and only report success after a confirmed response. Retries of unchanged answers reuse a UUID to avoid duplicate applications. Browser verification should intercept these requests with test responses rather than insert test records into the live database.
 
 ## Deploy
 
@@ -43,6 +43,7 @@ Use `npx vercel` without `--prod` when you want a preview URL first. Do not comm
 - Eurobot story: `eurobot.html`
 - NXP Cup story: `nxp.html`
 - Standalone joining page and animated robot: `join.html`, `join.css`, `join.js`
+- Membership form: submissions pass through `/api/memberships` into the Supabase `membership_applications` table. Apply `supabase/membership_applications.sql` and configure the same public Supabase environment variables used by the partnership form.
 - Partnership page and contact form: `partners.html`, `partners.css`, `partners.js`. The form sends validated requests through the `/api/partnerships` Vercel Function and stores them in the Supabase `partnership_inquiries` table without opening the visitor's email app. Configure `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in Vercel, and apply `supabase/partnership_inquiries.sql` to grant insert-only access to the anonymous role.
 - Team and homepage gallery data: `app.js`
 - Competition interactions and simulations: `competition.js`

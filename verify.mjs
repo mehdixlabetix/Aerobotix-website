@@ -16,6 +16,9 @@ const competitionScript = readFileSync(new URL("./competition.js", import.meta.u
 const failures = [];
 if (html.includes("data-join-form")) failures.push("Membership form must live on its own page");
 if (!pageSources.get("join.html").includes("data-join-form")) failures.push("Missing dedicated membership form");
+const joinScript = readFileSync(new URL("./join.js", import.meta.url), "utf8");
+if (!joinScript.includes('fetch("/api/memberships"')) failures.push("Membership form does not use the server API");
+if (joinScript.includes("firestore.googleapis.com")) failures.push("Membership form still references Firestore");
 if (!html.includes('href="./join.html"')) failures.push("Missing link to the joining page");
 const requiredSections = ["home", "about", "axes", "memories", "competitions", "achievements", "events", "team"];
 

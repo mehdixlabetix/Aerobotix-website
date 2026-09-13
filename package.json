@@ -8,7 +8,7 @@
     "build": "node build.mjs",
     "dev": "node server.mjs",
     "start": "node server.mjs",
-    "check": "node --check app.js && node --check competition.js && node --check join.js && node --check partners.js && node --check api/partnerships.js && node --check build.mjs && node --check server.mjs && node verify.mjs"
+    "check": "node --check app.js && node --check competition.js && node --check join.js && node --check partners.js && node --check api/memberships.js && node --check api/partnerships.js && node --check build.mjs && node --check server.mjs && node verify.mjs"
   },
   "engines": {
     "node": "22.x"

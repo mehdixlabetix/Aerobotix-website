@@ -1,5 +1,3 @@
-// Same public Firestore project, collection and field names as the original
-// membership form. Requests remain subject to the existing Firebase rules.
 const joinForm = document.querySelector("[data-join-form]");
 if (joinForm instanceof HTMLFormElement) {
   const fields = joinForm.querySelector("[data-join-fields]");
@@ -26,13 +24,22 @@ if (joinForm instanceof HTMLFormElement) {
     required.forEach((input) => { input.value = input.value.trim(); });
     if (!joinForm.reportValidity()) return;
 
-    const values = Object.fromEntries([...new FormData(joinForm)].map(([key, value]) => [key, value.trim()]));
+    const formValues = Object.fromEntries([...new FormData(joinForm)].map(([key, value]) => [key, value.trim()]));
+    const values = {
+      first_name: formValues.prenom,
+      last_name: formValues.nom,
+      email: formValues.email,
+      phone: formValues.phone,
+      study_level: formValues.niveau,
+      field_of_study: formValues.filiere,
+      facebook_url: formValues.fb,
+      interests: formValues.interests,
+      expectations: formValues.expectations,
+    };
     const fingerprint = JSON.stringify(values);
     if (!pendingApplication || pendingApplication.fingerprint !== fingerprint) {
-      pendingApplication = { id: crypto.randomUUID(), fingerprint, values: { ...values, time: new Date().toString() } };
+      pendingApplication = { id: crypto.randomUUID(), fingerprint };
     }
-    const endpoint = `https://firestore.googleapis.com/v1/projects/aerobotix-b4855/databases/(default)/documents/members?documentId=${pendingApplication.id}`;
-    const payload = { fields: Object.fromEntries(Object.entries(pendingApplication.values).map(([key, value]) => [key, { stringValue: value }])) };
     sending = true;
     fields.disabled = true;
     joinForm.dataset.state = "sending";
@@ -42,17 +49,14 @@ if (joinForm instanceof HTMLFormElement) {
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 15000);
     try {
-      const response = await fetch(endpoint, {
+      const response = await fetch("/api/memberships", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ id: pendingApplication.id, ...values }),
         signal: controller.signal,
-        credentials: "omit",
       });
       const result = await response.json();
-      // Retrying an acknowledged-late request reuses its UUID, preventing duplicates.
-      const alreadyReceived = response.status === 409 && result.error?.status === "ALREADY_EXISTS";
-      if ((!response.ok || !result.name) && !alreadyReceived) throw new Error("Application not confirmed");
+      if (!response.ok || !result.ok) throw new Error("Application not confirmed");
       joinForm.dataset.state = "success";
       status.textContent = "Application received. Thank you for taking the first step! The AeRobotiX team will contact you using the details you shared.";
       submit.textContent = "Application received ✓";
