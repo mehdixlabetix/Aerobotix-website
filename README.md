@@ -1,54 +1,108 @@
-# AeRobotiX Vitrine
+<div align="center">
+  <img src="assets/images/brand/logo-removebg-preview.png" alt="AeRobotiX INSAT" width="180" />
+  <h1>AeRobotiX INSAT</h1>
+  <p><strong>Learn. Create. Innovate.</strong></p>
+  <p>The official digital showcase for INSAT's robotics and aeronautics club.</p>
+</div>
 
-Standalone public showcase for AeRobotiX INSAT. It includes the club homepage and dedicated Eurobot and NXP Cup stories, with responsive motion, accessible interactions, live technical simulations, and optimized media loading.
+## About
 
-## Run locally
+This repository powers the AeRobotiX club website: its story, competition achievements, events, executive board, membership applications, and partnership enquiries. It is a dependency-free static frontend backed by small Vercel Functions and Supabase.
+
+### Highlights
+
+- Responsive, accessible pages with reduced-motion support
+- Dedicated Eurobot and NXP Cup competition stories
+- Filterable competition archive and optimized media build
+- Membership and partnership forms with server-side validation
+- Supabase tables protected by insert-only Row Level Security policies
+- Production security headers and clean URLs on Vercel
+
+## Project structure
+
+```text
+.
+├── api/                  # Vercel Functions for form submissions
+├── assets/
+│   ├── images/           # Brand, competition, board, and memory photos
+│   └── videos/           # Locally hosted video
+├── public/               # Favicon, robots.txt, sitemap, and manifest
+├── scripts/              # Build, local preview, and verification tools
+├── src/
+│   ├── pages/            # HTML pages
+│   ├── scripts/          # Browser JavaScript
+│   └── styles/           # Page and shared CSS
+├── supabase/             # Table definitions and RLS policies
+├── package.json
+└── vercel.json
+```
+
+The generated `dist/` directory mirrors the production artifact and is intentionally excluded from Git.
+
+## Local development
+
+Requirements: Node.js 22 or newer.
 
 ```bash
-cd /path/to/aerobotix_identity
+git clone https://github.com/mehdixlabetix/Aerobotix-website.git
+cd Aerobotix-website
 npm run dev
 ```
 
-Open `http://127.0.0.1:4173`.
+Open [http://127.0.0.1:4173](http://127.0.0.1:4173). The development command creates a fresh production-style build before starting the local preview server.
 
-## Validate
+## Commands
 
-```bash
-npm run check
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Build and preview locally on port 4173 |
+| `npm run build` | Generate the static production artifact in `dist/` |
+| `npm run check` | Build, syntax-check, and verify pages and local assets |
+| `npm start` | Serve an existing `dist/` build |
+
+## Supabase forms
+
+Create the required tables and insert-only policies by running these files in the Supabase SQL Editor:
+
+- `supabase/membership_applications.sql`
+- `supabase/partnership_inquiries.sql`
+
+Configure these variables in **Vercel → Project → Settings → Environment Variables**:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 ```
 
-Create the same static artifact used by production with `npm run build`. The
-generated `dist/` directory is intentionally ignored by Git.
+The values belong in Vercel, never in this repository. Both browser forms submit to same-origin Vercel Functions, which validate and normalize data before sending it to Supabase. Repeated submissions reuse UUIDs to avoid duplicate rows.
 
-The site has no runtime dependencies or authentication. The membership and partnership forms submit to server-side Vercel Functions, which validate requests before inserting them into Supabase with its public anon key and insert-only Row Level Security policies. The included Node server exists only for local preview, supports clean page URLs, and applies a production-style security-header baseline.
+| Form | Endpoint | Supabase table |
+| --- | --- | --- |
+| Join Us | `/api/memberships` | `membership_applications` |
+| Partnerships | `/api/partnerships` | `partnership_inquiries` |
 
-The forms preserve answers on submission failure and only report success after a confirmed response. Retries of unchanged answers reuse a UUID to avoid duplicate applications. Browser verification should intercept these requests with test responses rather than insert test records into the live database.
+## Updating content
 
-## Deploy
+- Main pages: `src/pages/`
+- Executive board and homepage data: `src/scripts/app.js`
+- Shared visual system: `src/styles/styles.css`
+- Competition media: `assets/images/competitions/`
+- Executive board photos: `assets/images/executive-board/`
+- Memories: `assets/images/memories/`
 
-The repository includes a `vercel.json` configuration with clean URLs and production security headers. After signing in and linking the correct Vercel project:
+Board members without a photo use a branded placeholder. Add the image to the executive-board folder and set its path in `src/scripts/app.js`.
+
+## Deployment
+
+Pushes to the connected branch deploy automatically on Vercel. For a manual production deployment:
 
 ```bash
-npx vercel login
-npx vercel link
 npm run check
 npx vercel --prod
 ```
 
-Use `npx vercel` without `--prod` when you want a preview URL first. Do not commit `.vercel/`; it contains the local project link.
+`vercel.json` defines the build output, clean URLs, and security headers. Keep `.vercel/`, `.env*`, and `dist/` out of Git.
 
-## Content locations
+## Credits
 
-- Homepage copy and sections: `index.html`
-- Eurobot story: `eurobot.html`
-- NXP Cup story: `nxp.html`
-- Standalone joining page and animated robot: `join.html`, `join.css`, `join.js`
-- Membership form: submissions pass through `/api/memberships` into the Supabase `membership_applications` table. Apply `supabase/membership_applications.sql` and configure the same public Supabase environment variables used by the partnership form.
-- Partnership page and contact form: `partners.html`, `partners.css`, `partners.js`. The form sends validated requests through the `/api/partnerships` Vercel Function and stores them in the Supabase `partnership_inquiries` table without opening the visitor's email app. Configure `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in Vercel, and apply `supabase/partnership_inquiries.sql` to grant insert-only access to the anonymous role.
-- Team and homepage gallery data: `app.js`
-- Competition interactions and simulations: `competition.js`
-- Eurobot competition video: `videos/eurobot.mp4`
-- Brand and homepage motion system: `styles.css`
-- Competition page visual system: `competition.css`
-
-The supplied `logo-removebg-preview.png` is the transparent logo used for site branding and icons. CSS frames its transparent margins without altering the original artwork. `logo.jpeg` includes the background and is used for the homepage sharing image. Both files are included in production builds. Public images and the optional showreel are delivered from the club's existing Cloudinary account using unsigned delivery URLs; no API secret is included.
+Created for AeRobotiX INSAT by Amine Bensaid.

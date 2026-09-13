@@ -2,21 +2,22 @@ import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = fileURLToPath(new URL(".", import.meta.url));
+const projectRoot = fileURLToPath(new URL("../", import.meta.url));
+const root = resolve(projectRoot, "dist");
 const pages = ["index.html", "eurobot.html", "nxp.html", "join.html", "partners.html"];
 const pageSources = new Map(
-  pages.map((page) => [page, readFileSync(new URL(`./${page}`, import.meta.url), "utf8")]),
+  pages.map((page) => [page, readFileSync(resolve(root, page), "utf8")]),
 );
 const html = pageSources.get("index.html");
-const css = readFileSync(new URL("./styles.css", import.meta.url), "utf8");
-const competitionCss = readFileSync(new URL("./competition.css", import.meta.url), "utf8");
-const script = readFileSync(new URL("./app.js", import.meta.url), "utf8");
-const competitionScript = readFileSync(new URL("./competition.js", import.meta.url), "utf8");
+const css = readFileSync(resolve(root, "styles.css"), "utf8");
+const competitionCss = readFileSync(resolve(root, "competition.css"), "utf8");
+const script = readFileSync(resolve(root, "app.js"), "utf8");
+const competitionScript = readFileSync(resolve(root, "competition.js"), "utf8");
 
 const failures = [];
 if (html.includes("data-join-form")) failures.push("Membership form must live on its own page");
 if (!pageSources.get("join.html").includes("data-join-form")) failures.push("Missing dedicated membership form");
-const joinScript = readFileSync(new URL("./join.js", import.meta.url), "utf8");
+const joinScript = readFileSync(resolve(root, "join.js"), "utf8");
 if (!joinScript.includes('fetch("/api/memberships"')) failures.push("Membership form does not use the server API");
 if (joinScript.includes("firestore.googleapis.com")) failures.push("Membership form still references Firestore");
 if (!html.includes('href="./join.html"')) failures.push("Missing link to the joining page");
@@ -60,9 +61,10 @@ for (const [page, source] of pageSources) {
   }
 }
 
-for (const requiredPage of ["eurobot.html", "nxp.html", "competition.css", "competition.js", "vercel.json"]) {
+for (const requiredPage of ["eurobot.html", "nxp.html", "competition.css", "competition.js"]) {
   if (!existsSync(resolve(root, requiredPage))) failures.push(`Missing production file: ${requiredPage}`);
 }
+if (!existsSync(resolve(projectRoot, "vercel.json"))) failures.push("Missing Vercel configuration");
 
 if (failures.length) {
   console.error(failures.join("\n"));

@@ -5,10 +5,10 @@
   "description": "AeRobotiX INSAT public showcase website",
   "type": "module",
   "scripts": {
-    "build": "node build.mjs",
-    "dev": "node server.mjs",
-    "start": "node server.mjs",
-    "check": "node --check app.js && node --check competition.js && node --check join.js && node --check partners.js && node --check api/memberships.js && node --check api/partnerships.js && node --check build.mjs && node --check server.mjs && node verify.mjs"
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && node scripts/server.mjs",
+    "start": "node scripts/server.mjs",
+    "check": "npm run build && node --check src/scripts/app.js && node --check src/scripts/competition.js && node --check src/scripts/join.js && node --check src/scripts/partners.js && node --check api/memberships.js && node --check api/partnerships.js && node --check scripts/build.mjs && node --check scripts/server.mjs && node scripts/verify.mjs"
   },
   "engines": {
     "node": "22.x"
