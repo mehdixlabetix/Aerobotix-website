@@ -1217,110 +1217,6 @@ main,
   backdrop-filter: blur(10px);
 }
 
-.flagship-scan {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 3;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
-  box-shadow: 0 0 18px var(--cyan);
-  animation: flagship-scan 4.8s ease-in-out infinite;
-}
-
-.arena-radar {
-  position: absolute;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  z-index: 3;
-  width: 6.5rem;
-  height: 6.5rem;
-  border: 1px solid rgba(35, 169, 224, 0.42);
-  border-radius: 50%;
-  background: repeating-radial-gradient(circle, transparent 0 20%, rgba(35, 169, 224, 0.15) 21% 22%);
-}
-
-.arena-radar::before {
-  position: absolute;
-  inset: 50% 0 0 50%;
-  border-left: 1px solid rgba(128, 220, 255, 0.48);
-  background: conic-gradient(from 270deg, rgba(35, 169, 224, 0.32), transparent 28%);
-  content: "";
-  transform-origin: left top;
-  animation: radar-sweep 3.2s linear infinite;
-}
-
-.arena-radar i,
-.vision-reticle i {
-  position: absolute;
-  width: 0.35rem;
-  height: 0.35rem;
-  border-radius: 50%;
-  background: var(--red);
-  box-shadow: 0 0 12px var(--red);
-}
-
-.arena-radar i:nth-child(1) { top: 23%; left: 35%; }
-.arena-radar i:nth-child(2) { right: 20%; bottom: 34%; background: var(--cyan); }
-.arena-radar i:nth-child(3) { bottom: 18%; left: 24%; }
-
-.flagship-road {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  overflow: hidden;
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-.flagship-road::before,
-.flagship-road::after {
-  position: absolute;
-  top: -12%;
-  width: 2px;
-  height: 130%;
-  background: linear-gradient(transparent, var(--cyan), transparent);
-  content: "";
-  transform: rotate(17deg);
-  transform-origin: center;
-}
-
-.flagship-road::before { left: 32%; }
-.flagship-road::after { right: 25%; }
-
-.flagship-road i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0.85rem;
-  height: 1.35rem;
-  border: 1px solid white;
-  border-radius: 0.3rem;
-  background: var(--red);
-  box-shadow: 0 0 20px rgba(238, 32, 40, 0.8);
-  animation: road-run 5s ease-in-out infinite;
-}
-
-.vision-reticle {
-  position: absolute;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  z-index: 3;
-  width: 5.5rem;
-  height: 5.5rem;
-  border: 1px solid rgba(238, 32, 40, 0.48);
-  clip-path: polygon(0 0, 35% 0, 35% 2%, 2% 2%, 2% 35%, 0 35%, 0 0, 100% 0, 100% 35%, 98% 35%, 98% 2%, 65% 2%, 65% 0, 100% 0, 100% 100%, 65% 100%, 65% 98%, 98% 98%, 98% 65%, 100% 65%, 100% 100%, 0 100%, 0 65%, 2% 65%, 2% 98%, 35% 98%, 35% 100%, 0 100%);
-  animation: reticle-lock 3.8s var(--ease) infinite;
-}
-
-.vision-reticle i {
-  top: calc(50% - 0.175rem);
-  left: calc(50% - 0.175rem);
-  background: var(--cyan);
-  box-shadow: 0 0 12px var(--cyan);
-}
-
 .flagship-content {
   display: flex;
   align-items: flex-end;
@@ -1362,56 +1258,6 @@ main,
   border-color: var(--red);
   background: var(--red);
   transform: rotate(45deg);
-}
-
-.flagship-telemetry {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.9rem clamp(1.5rem, 3vw, 2.4rem);
-  border-top: 1px solid var(--line);
-  color: rgba(255, 255, 255, 0.48);
-  font-family: var(--display);
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.flagship-telemetry span:first-child {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.flagship-telemetry span:first-child i {
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 50%;
-  background: #4fe38a;
-  box-shadow: 0 0 10px rgba(79, 227, 138, 0.8);
-  animation: signal 2s infinite;
-}
-
-@keyframes flagship-scan {
-  0%, 100% { transform: translateY(0); opacity: 0; }
-  12%, 82% { opacity: 1; }
-  92% { transform: translateY(34rem); opacity: 0; }
-}
-
-@keyframes radar-sweep {
-  to { transform: rotate(360deg); }
-}
-
-@keyframes road-run {
-  0% { transform: translate(-8rem, 12rem) rotate(17deg); }
-  48% { transform: translate(-1rem, -1rem) rotate(17deg); }
-  100% { transform: translate(7rem, -13rem) rotate(17deg); }
-}
-
-@keyframes reticle-lock {
-  0%, 100% { transform: scale(1.15); opacity: 0.48; }
-  45%, 65% { transform: scale(0.82); opacity: 1; }
 }
 
 .memories {
@@ -1464,9 +1310,20 @@ main,
 }
 
 .person-card.image-unavailable {
+  grid-template-columns: 1fr;
   background:
     radial-gradient(circle at 68% 20%, rgba(35, 169, 224, 0.3), transparent 35%),
     linear-gradient(145deg, rgba(238, 32, 40, 0.15), var(--panel) 58%);
+}
+
+.person-card.image-unavailable .person-meta::before {
+  margin-bottom: auto;
+  color: rgba(255, 255, 255, 0.12);
+  font-family: var(--display);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  content: "AERO";
 }
 
 .memory-card:nth-child(3n + 1) {
@@ -2106,7 +1963,7 @@ main,
   grid-template-rows: repeat(2, minmax(15rem, 1fr));
 }
 
-.team-group-2 .person-card:last-child:nth-child(odd) {
+.team-group-1 .person-card:last-child:nth-child(odd) {
   grid-column: 1 / -1;
   grid-template-columns: minmax(12rem, 0.28fr) minmax(0, 0.72fr);
 }
@@ -2827,7 +2684,7 @@ main,
     min-height: 34rem;
   }
 
-  .team-group-2 .person-card:last-child:nth-child(odd) {
+  .team-group-1 .person-card:last-child:nth-child(odd) {
     grid-column: auto;
     grid-template-columns: minmax(9rem, 0.42fr) minmax(0, 0.58fr);
   }
@@ -2886,13 +2743,6 @@ main,
     height: 3rem;
   }
 
-  .arena-radar,
-  .vision-reticle {
-    right: 1rem;
-    bottom: 1rem;
-    transform: scale(0.82);
-    transform-origin: right bottom;
-  }
 }
 
 @media (max-width: 420px) {
@@ -2909,7 +2759,7 @@ main,
     min-height: 30rem;
   }
 
-  .team-group-2 .person-card:last-child:nth-child(odd) {
+  .team-group-1 .person-card:last-child:nth-child(odd) {
     grid-template-columns: 1fr;
   }
 

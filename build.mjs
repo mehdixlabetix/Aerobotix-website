@@ -41,7 +41,7 @@ for (const file of staticFiles) {
   cpSync(join(root, file), join(output, file));
 }
 
-for (const directory of ["comps", "memories", "videos"]) {
+for (const directory of ["comps", "executive board", "memories", "videos"]) {
   cpSync(join(root, directory), join(output, directory), {
     recursive: true,
     filter(source) {

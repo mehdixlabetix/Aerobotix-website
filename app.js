@@ -7,88 +7,112 @@ const REEL_URL =
 
 const team = [
   {
-    name: "Sami Bahlous",
+    name: "Yessin Allouch",
     role: "President",
-    image: "v1727725118/1_e3rxs1.png",
+    image: "./executive board/yassine allouche.jpg",
     group: "Executive board",
   },
   {
-    name: "Lina Hamad",
+    name: "Maram Khalsi",
     role: "Administrative Vice President",
-    image: "v1727725119/2_bar5hy.png",
+    image: "./executive board/maram khalsi.jpg",
     group: "Executive board",
   },
   {
-    name: "Fayez Zouari",
+    name: "Med Dhia Selmi",
     role: "Technical Vice President",
-    image: "v1727725118/3_kukvc5.png",
+    image: null,
     group: "Executive board",
   },
   {
-    name: "Rayen Bouafif",
+    name: "Amine Bensaid",
+    role: "Webmaster",
+    image: "./executive board/amine bensaid.jpg",
+    group: "Executive board",
+  },
+  {
+    name: "Jihed Selini",
     role: "Training Manager",
-    image: "v1727725122/6_nz8gyv.png",
-    group: "Management team",
+    image: null,
+    group: "Executive board",
   },
   {
-    name: "Marwen Dhifi",
+    name: "Melek Hmadi",
     role: "Training Manager",
-    image: "v1727725127/9_mmmhkn.png",
-    group: "Management team",
+    image: null,
+    group: "Executive board",
   },
   {
-    name: "Abdelkarim Salah",
-    role: "Training Manager",
-    image: "v1727725119/7_ev17do.png",
-    group: "Management team",
+    name: "Ons Manai",
+    role: "R&D Manager",
+    image: null,
+    group: "Executive board",
   },
   {
-    name: "Mohamed Zouaghi",
-    role: "Projects Manager",
-    image: "v1727725125/8_yv1ywd.png",
-    group: "Management team",
+    name: "Omar Kaaniche",
+    role: "R&D Manager",
+    image: "./executive board/omar kaaniche.jpg",
+    group: "Executive board",
   },
   {
-    name: "Amine BelhajAmor",
-    role: "Aeronautics Manager",
-    image: "v1727725126/14_n72byw.png",
-    group: "Management team",
-  },
-  {
-    name: "Med Hedi Zadem",
+    name: "Yessin Hammami",
     role: "Logistics Manager",
-    image: "v1727725127/13_itirom.png",
-    group: "Management team",
+    image: null,
+    group: "Executive board",
   },
   {
-    name: "Zeyneb Ben Abdallah",
+    name: "Adem Mighri",
+    role: "Logistics Manager",
+    image: "./executive board/adem mighri.jpg",
+    group: "Executive board",
+  },
+  {
+    name: "Yasmine Kefi",
     role: "Human Resources Manager",
-    image: "v1727725125/4_mq804n.png",
-    group: "Management team",
+    image: null,
+    group: "Executive board",
   },
   {
-    name: "Aicha Guidara",
+    name: "Hatem Bensalha",
     role: "Media Manager",
-    image: "v1727725122/5_adnfq6.png",
-    group: "Management team",
+    image: null,
+    group: "Executive board",
   },
   {
-    name: "Meriem Slim",
-    role: "Sponsoring Manager",
-    image: "v1727725120/10_m3ykf5.png",
-    group: "Support team",
+    name: "Jihed Bejaoui",
+    role: "Media Manager",
+    image: null,
+    group: "Executive board",
   },
   {
-    name: "Nour Halouani",
-    role: "Treasurer",
-    image: "v1727725123/12_nuekiw.png",
-    group: "Support team",
+    name: "Ibrahim Benhamida",
+    role: "Sponsorship Manager",
+    image: "./executive board/ibrahim ben hmida.jpg",
+    group: "Executive board",
   },
   {
-    name: "Maryem Besbes",
-    role: "External Relations Manager",
-    image: "v1727725122/11_lvhgyl.png",
-    group: "Support team",
+    name: "Ahmed Jedidi",
+    role: "Sponsorship Manager",
+    image: "./executive board/ahmed jedidi.jpg",
+    group: "Executive board",
+  },
+  {
+    name: "Ayoub Ayari",
+    role: "Aeronautics Manager",
+    image: null,
+    group: "Executive board",
+  },
+  {
+    name: "Mahmoud Ben Ayed",
+    role: "Aeronautics Manager",
+    image: "./executive board/mahmoud ben ayed.jpg",
+    group: "Executive board",
+  },
+  {
+    name: "Ahmed Belkahia",
+    role: "Participation Manager",
+    image: null,
+    group: "Executive board",
   },
 ];
 
@@ -272,15 +296,20 @@ function renderTeam() {
       article.dataset.reveal = "";
       article.style.setProperty("--reveal-delay", `${(index % 4) * 70}ms`);
 
-      const image = document.createElement("img");
-      image.src = `${CLOUDINARY_TEAM}/${person.image}`;
-      image.alt = person.name;
-      image.loading = personIndex < 3 ? "eager" : "lazy";
-      image.decoding = "async";
-      image.addEventListener("error", () => {
-        image.remove();
+      if (person.image) {
+        const image = document.createElement("img");
+        image.src = person.image.startsWith("./") ? person.image : `${CLOUDINARY_TEAM}/${person.image}`;
+        image.alt = person.name;
+        image.loading = personIndex < 3 ? "eager" : "lazy";
+        image.decoding = "async";
+        image.addEventListener("error", () => {
+          image.remove();
+          article.classList.add("image-unavailable");
+        });
+        article.append(image);
+      } else {
         article.classList.add("image-unavailable");
-      });
+      }
 
       const meta = document.createElement("div");
       meta.className = "person-meta";
@@ -295,7 +324,7 @@ function renderTeam() {
       role.textContent = person.role;
 
       meta.append(number, name, role);
-      article.append(image, meta);
+      article.append(meta);
       grid.append(article);
       personIndex += 1;
     });
