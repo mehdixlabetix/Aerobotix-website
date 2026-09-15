@@ -663,7 +663,7 @@ main,
 
 .hero-visual {
   justify-self: end;
-  width: min(100%, 42rem);
+  width: min(100%, 26rem);
   perspective: 1200px;
 }
 
@@ -679,7 +679,7 @@ main,
 
 .hero-image-frame {
   position: relative;
-  aspect-ratio: 0.88;
+  aspect-ratio: 1600 / 2769;
   overflow: hidden;
   border: 1px solid var(--line-strong);
   border-radius: 1.25rem 1.25rem 8rem 1.25rem;
@@ -705,8 +705,8 @@ main,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   filter: saturate(0.82) contrast(1.08);
-  transform: scale(1.04);
 }
 
 .hero-image-scan {
@@ -2473,7 +2473,7 @@ main,
 
   .hero-visual {
     justify-self: center;
-    width: min(88%, 36rem);
+    width: min(88%, 26rem);
   }
 
   .scroll-cue {
@@ -2587,7 +2587,7 @@ main,
   }
 
   .hero-visual {
-    width: 95%;
+    width: min(95%, 26rem);
   }
 
   .hero-orbit {

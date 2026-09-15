@@ -27,7 +27,7 @@ const fileMappings = [
 ];
 const directoryMappings = [
   ["assets/images/competitions", "comps"],
-  ["assets/images/executive-board", "executive board"],
+  ["assets/images/executive-board", "board_v2"],
   ["assets/images/memories", "memories"],
   ["assets/videos", "videos"],
 ];
